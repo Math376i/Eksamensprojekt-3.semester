@@ -1,6 +1,6 @@
 ﻿using Application.Interfaces;
 
-namespace Infrasturkture;
+namespace Infrastructure;
 
 public class PizzaRepository : IPizzaRepository
 {

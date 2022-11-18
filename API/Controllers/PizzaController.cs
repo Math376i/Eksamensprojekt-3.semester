@@ -1,4 +1,5 @@
 
+using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -7,10 +8,18 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class PizzaController : ControllerBase
 {
-    [Route("Rebuilddb")]
-    [HttpGet]
-    public void rebuild()
+    private IPizzaService _pizzaService;
+
+    public PizzaController(IPizzaService service)
     {
-        
+        _pizzaService = service;
+    }
+    
+    [HttpGet]
+    [Route("RebuildDB")]
+    public string RebuildDB()
+    {
+        _pizzaService.RebuildDB();
+        return "Db has been created";
     }
 }

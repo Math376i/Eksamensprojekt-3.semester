@@ -2,5 +2,5 @@
 
 public interface IPizzaRepository
 {
-    
+    public void RebuildDB();
 }

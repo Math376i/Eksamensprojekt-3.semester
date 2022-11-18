@@ -1,9 +1,9 @@
 ﻿using Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrasturkture;
+namespace Infrastructure;
 
-public class PizzaDbContext
+public class PizzaDbContext : DbContext
 {
     public PizzaDbContext(DbContextOptions<PizzaDbContext> opts) : base(opts)
     {
@@ -17,5 +17,5 @@ public class PizzaDbContext
             .ValueGeneratedOnAdd();
     }
     
-    public DbSet<Box> BoxTable { get; set; }
+    public DbSet<Pizza> PizzaTable { get; set; }
 }
