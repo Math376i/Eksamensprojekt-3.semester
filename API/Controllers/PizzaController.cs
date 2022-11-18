@@ -7,5 +7,10 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class PizzaController : ControllerBase
 {
-    
+    [Route("Rebuilddb")]
+    [HttpGet]
+    public void rebuild()
+    {
+        
+    }
 }
