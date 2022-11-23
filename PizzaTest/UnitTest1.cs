@@ -7,7 +7,7 @@ namespace PizzaTest;
 
 public class UnitTest1
 {
-    [Fact]
+  /*  [Fact]
     public void GetAllPizzas()
     {
         // Arrange
@@ -31,5 +31,5 @@ public class UnitTest1
         Assert.Contains(Pizza2,result);
         Assert.Contains(Pizza3,result);
         mockRepository.Verify(r => r.GetAll(), Times.Once);
-    }
+    } */
 }
