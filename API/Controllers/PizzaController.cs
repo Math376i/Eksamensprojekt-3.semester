@@ -22,4 +22,12 @@ public class PizzaController : ControllerBase
     {
         return _pizzaService.GetAllPizzas();
     }
+    
+    [HttpGet]
+    [Route("RebuildDB")]
+    public string RebuildDB()
+    {
+        _pizzaService.RebuildDB();
+        return "Db has been created";
+    }
 }
