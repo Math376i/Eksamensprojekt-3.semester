@@ -19,9 +19,10 @@ public class PizzaRepository : IPizzaRepository
         _pizzaContext.Database.EnsureDeleted();
         _pizzaContext.Database.EnsureCreated();
     }
-    public List<Pizza> GetAll()
+
+    public List<Pizza> GetAllPizzas()
     {
-        throw new NotImplementedException();
+        return _pizzaContext.PizzaTable.ToList();
     }
 
     public ActionResult CreateNewPizza(Pizza dto)

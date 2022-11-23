@@ -1,10 +1,11 @@
+using Application;
 using Application.DTOs;
+using Application.Interfaces;
 using AutoMapper;
 using Domain;
 using FluentValidation;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,11 @@ var config = new MapperConfiguration(conf =>
 var mapper = config.CreateMapper();
 
 builder.Services.AddSingleton(mapper);
+
+builder.Services.AddScoped<IPizzaRepository, PizzaRepository>();
+builder.Services.AddScoped<IPizzaService, PizzaService>();
+builder.Services.AddScoped<IValidator<PizzaDTOs>>();
+builder.Services.AddScoped<IValidator<Pizza>>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

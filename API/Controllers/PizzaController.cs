@@ -17,17 +17,18 @@ public class PizzaController : ControllerBase
     }
     
     [HttpGet]
-    [Route("GetAllBoxes")]
-    public List<Pizza> GetBox()
-    {
-        return _pizzaService.GetAllPizzas();
-    }
-    
-    [HttpGet]
     [Route("RebuildDB")]
     public string RebuildDB()
     {
         _pizzaService.RebuildDB();
         return "Db has been created";
     }
+    
+    [HttpGet]
+    [Route("GetAllBoxes")]
+    public List<Pizza> GetBox()
+    {
+        return _pizzaService.GetAllPizzas();
+    }
+    
 }

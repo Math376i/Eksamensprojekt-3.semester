@@ -31,7 +31,7 @@ public class PizzaService : IPizzaService
     
     public List<Pizza> GetAllPizzas()
     {
-        return _pizzaRepository.GetAll();
+        return _pizzaRepository.GetAllPizzas();
     }
 
     public ActionResult CreateNewPizza(PizzaDTOs dto)

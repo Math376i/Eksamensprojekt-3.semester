@@ -7,7 +7,7 @@ namespace Application.Interfaces;
 public interface IPizzaRepository
 {
     public void RebuildDB();
-    List<Pizza> GetAll();
+    List<Pizza> GetAllPizzas();
     
     ActionResult CreateNewPizza(Pizza dto);
 }

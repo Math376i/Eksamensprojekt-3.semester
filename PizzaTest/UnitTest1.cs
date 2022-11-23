@@ -7,7 +7,7 @@ namespace PizzaTest;
 
 public class UnitTest1
 {
-  /*  [Fact]
+    [Fact]
     public void GetAllPizzas()
     {
         // Arrange
@@ -18,7 +18,7 @@ public class UnitTest1
         List<Pizza> fakeRepo = new List<Pizza>() { Pizza1, Pizza2, Pizza3 };
 
         Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
-        mockRepository.Setup(r => r.GetAll()).Returns(fakeRepo);
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(fakeRepo);
 
         IPizzaService service = new PizzaService(mockRepository.Object);
         
@@ -30,6 +30,6 @@ public class UnitTest1
         Assert.Contains(Pizza1,result);
         Assert.Contains(Pizza2,result);
         Assert.Contains(Pizza3,result);
-        mockRepository.Verify(r => r.GetAll(), Times.Once);
-    } */
+        mockRepository.Verify(r => r.GetAllPizzas(), Times.Once);
+    } 
 }
