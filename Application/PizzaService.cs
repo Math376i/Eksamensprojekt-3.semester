@@ -24,6 +24,11 @@ public class PizzaService : IPizzaService
         _pizzaValidator = pizzaValidator;
     }
     
+    public void RebuildDB()
+    {
+        _pizzaRepository.RebuildDB();
+    }
+    
     public List<Pizza> GetAllPizzas()
     {
         return _pizzaRepository.GetAll();
