@@ -34,13 +34,12 @@ public class PizzaService : IPizzaService
         return _pizzaRepository.GetAllPizzas();
     }
 
-    public ActionResult CreateNewPizza(PizzaDTOs dto)
+    public Pizza CreateNewPizza(PizzaDTOs dto)
     {
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-
-
+        
         return _pizzaRepository.CreateNewPizza(_mapper.Map<Pizza>(dto));
     }
 

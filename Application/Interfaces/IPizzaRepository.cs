@@ -9,5 +9,5 @@ public interface IPizzaRepository
     public void RebuildDB();
     List<Pizza> GetAllPizzas();
     
-    ActionResult CreateNewPizza(Pizza dto);
+    Pizza CreateNewPizza(Pizza pizza);
 }

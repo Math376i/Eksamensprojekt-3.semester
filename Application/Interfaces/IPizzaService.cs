@@ -10,5 +10,5 @@ public interface IPizzaService
     public void RebuildDB();
     List<Pizza> GetAllPizzas();
 
-    ActionResult CreateNewPizza(PizzaDTOs dto);
+    Pizza CreateNewPizza(PizzaDTOs dto);
 }

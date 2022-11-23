@@ -25,8 +25,10 @@ public class PizzaRepository : IPizzaRepository
         return _pizzaContext.PizzaTable.ToList();
     }
 
-    public ActionResult CreateNewPizza(Pizza dto)
+    public Pizza CreateNewPizza(Pizza pizza)
     {
-        throw new NotImplementedException();
+        _pizzaContext.PizzaTable.Add(pizza);
+        _pizzaContext.SaveChanges();
+        return pizza;
     }
 }
