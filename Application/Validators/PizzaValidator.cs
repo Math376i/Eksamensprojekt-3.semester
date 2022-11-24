@@ -1,6 +1,8 @@
-﻿namespace Application.Validators;
+﻿using FluentValidation;
 
-public class PizzaValidator
+namespace Application.Validators;
+
+public class PizzaValidator : AbstractValidator<PizzaValidator>
 {
     
 }

@@ -21,16 +21,12 @@ var mapper = config.CreateMapper();
 
 builder.Services.AddSingleton(mapper);
 
-builder.Services.AddScoped<IPizzaRepository, PizzaRepository>();
-builder.Services.AddScoped<IPizzaService, PizzaService>();
-builder.Services.AddScoped<IValidator<PizzaDTOs>>();
-builder.Services.AddScoped<IValidator<Pizza>>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
 Application.DependencyResolver.DependencyResolverService.RegisterApplicationLayer(builder.Services);

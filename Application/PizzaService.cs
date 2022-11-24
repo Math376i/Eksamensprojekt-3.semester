@@ -5,6 +5,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Application.DTOs;
 using Application.Interfaces;
+using Application.Validators;
 using Domain;
 
 namespace Application;  
@@ -13,10 +14,10 @@ public class PizzaService : IPizzaService
 {
     private IPizzaRepository _pizzaRepository;
     private IMapper _mapper;
-    private IValidator<PizzaDTOs> _postValidator;
-    private IValidator<Pizza> _pizzaValidator;
+    private PostPizzaValidator _postValidator;
+    private PizzaValidator _pizzaValidator;
     
-    public PizzaService(IPizzaRepository repository, IMapper mapper, IValidator<PizzaDTOs> postValidator, IValidator<Pizza> pizzaValidator)
+    public PizzaService(IPizzaRepository repository, IMapper mapper, PostPizzaValidator postValidator, PizzaValidator pizzaValidator)
     {
         _pizzaRepository = repository;
         _mapper = mapper;
