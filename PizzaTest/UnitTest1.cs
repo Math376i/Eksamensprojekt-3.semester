@@ -31,7 +31,7 @@ public class UnitTest1
 
         Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
         mockRepository.Setup(r => r.GetAllPizzas()).Returns(fakeRepo);
-/*
+
         IPizzaService service = new PizzaService(mockRepository.Object);
         
         // Act
@@ -44,6 +44,6 @@ public class UnitTest1
         Assert.Contains(Pizza3,result);
   
         mockRepository.Verify(r => r.GetAllPizzas(), Times.Once);
-    */
+    
     } 
 }
