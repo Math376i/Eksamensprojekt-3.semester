@@ -11,4 +11,12 @@ public class Pizza
     
     public string Topping { get; set; }
     
+    public int AlmPrice { get; set; }
+    
+    public int Fam40x40Price { get; set; }
+    
+    public int Fam50x50Price { get; set; }
+    
+    public int 
+
 }

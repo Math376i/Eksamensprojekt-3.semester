@@ -2,6 +2,7 @@ using Application;
 using Application.DTOs;
 using Domain;
 using Application.Interfaces;
+using Application.Validators;
 using AutoMapper;
 using FluentValidation;
 using Moq;
@@ -12,8 +13,8 @@ public class UnitTest1
 {
     private IPizzaRepository _pizzaRepository;
     private IMapper _mapper;
-    private IValidator<PizzaDTOs> _postValidator;
-    private IValidator<Pizza> _pizzaValidator;
+    private PostPizzaValidator _postValidator;
+    private PizzaValidator _pizzaValidator;
 
     public UnitTest1()
     {
@@ -32,7 +33,7 @@ public class UnitTest1
         Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
         mockRepository.Setup(r => r.GetAllPizzas()).Returns(fakeRepo);
 
-        IPizzaService service = new PizzaService(mockRepository.Object);
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
         
         // Act
         List<Pizza> result = service.GetAllPizzas();
