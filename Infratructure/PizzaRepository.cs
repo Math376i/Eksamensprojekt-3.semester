@@ -31,4 +31,20 @@ public class PizzaRepository : IPizzaRepository
         _pizzaContext.SaveChanges();
         return pizza;
     }
-}
+
+  public Pizza DeletePizza(int id)
+        {
+            var boxToDelete = _pizzaContext.PizzaTable.Find(id) ?? throw new KeyNotFoundException();
+            _pizzaContext.PizzaTable.Remove(DeletePizza(id));
+            _pizzaContext.SaveChanges();
+            return DeletePizza(id);
+        }
+  public Pizza UpdatePizza(Pizza pizza)
+  {
+      _pizzaContext.PizzaTable.Update(pizza);
+      _pizzaContext.SaveChanges();
+      return pizza;
+  }
+  
+  
+    }

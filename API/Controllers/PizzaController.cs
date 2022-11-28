@@ -50,5 +50,34 @@ public class PizzaController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    [HttpPut]
+    public ActionResult<Pizza> UpdatePizza([FromBody] Pizza pizza)
+    {
+        try
+        {
+            return Ok(_pizzaService.Updatepizza(pizza.Id ,pizza));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No box found at ID " + pizza.Id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
+    [HttpDelete]
+    [Route("{id}")]
+    public ActionResult<Pizza> DeletePizza(int id)
+    {
+        try
+        {
+            return Ok(_pizzaService.DeletePizza(id));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No pizza found at ID " + id);
+        }
+    }
     
 }

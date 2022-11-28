@@ -10,4 +10,7 @@ public interface IPizzaRepository
     List<Pizza> GetAllPizzas();
     
     Pizza CreateNewPizza(Pizza pizza);
+    
+    public Pizza DeletePizza(int id);
+    Pizza UpdatePizza(Pizza pizza);
 }

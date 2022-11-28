@@ -8,7 +8,7 @@ using Application.Interfaces;
 using Application.Validators;
 using Domain;
 
-namespace Application;  
+namespace Application;
 
 public class PizzaService : IPizzaService
 {
@@ -16,20 +16,21 @@ public class PizzaService : IPizzaService
     private IMapper _mapper;
     private PostPizzaValidator _postValidator;
     private PizzaValidator _pizzaValidator;
-    
-    public PizzaService(IPizzaRepository repository, IMapper mapper, PostPizzaValidator postValidator, PizzaValidator pizzaValidator)
+
+    public PizzaService(IPizzaRepository repository, IMapper mapper, PostPizzaValidator postValidator,
+        PizzaValidator pizzaValidator)
     {
         _pizzaRepository = repository;
         _mapper = mapper;
         _postValidator = postValidator;
         _pizzaValidator = pizzaValidator;
     }
-    
+
     public void RebuildDB()
     {
         _pizzaRepository.RebuildDB();
     }
-    
+
     public List<Pizza> GetAllPizzas()
     {
         return _pizzaRepository.GetAllPizzas();
@@ -40,9 +41,24 @@ public class PizzaService : IPizzaService
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        
+
         return _pizzaRepository.CreateNewPizza(_mapper.Map<Pizza>(dto));
     }
 
-    
+    public Pizza DeletePizza(int id)
+    {
+
+        return _pizzaRepository.DeletePizza(id);
+    }
+
+    public Pizza Updatepizza(int pizzaId, Pizza pizza)
+    {
+        if (pizzaId != pizza.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _pizzaValidator.Validate(pizza);
+        if (!Pizza.IsValid)
+            throw new ValidationException(validation.ToString());
+        return _pizzaRepository.UpdatePizza(pizza);
+
+    }
 }

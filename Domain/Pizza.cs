@@ -2,6 +2,7 @@
 
 public class Pizza
 {
+    public const bool IsValid = true;
 
     public int Id { get; set; }
     
@@ -17,6 +18,6 @@ public class Pizza
     
     public int Fam50x50Price { get; set; }
     
-    public int 
+    public int AlmGlutenPrice { get; set; }
 
 }
