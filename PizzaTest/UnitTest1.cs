@@ -25,9 +25,9 @@ public class UnitTest1
     {
         // Arrange
 
-        var Pizza1 = new Pizza() { Name = "Napoli", Price = 50, Topping = "Ost, TomatSauce, Peperoni, Cocktailpølser, Dressing" };
-        var Pizza2 = new Pizza() { Name = "Magharita", Price = 45, Topping = "Ost, TomatSauce" };
-        var Pizza3 = new Pizza() { Name = "Kebab", Price = 60, Topping = "Ost, TomatSauce, Salat, Kebab, Dressing" };
+        var Pizza1 = new Pizza() { Name = "Napoli", AlmPrice = 50, Fam40x40Price = 110, Fam50x50Price = 160, AlmGlutenfriPrice = 75, Topping = "Ost, TomatSauce, Peperoni, Cocktailpølser, Dressing" };
+        var Pizza2 = new Pizza() { Name = "Magharita", AlmPrice = 45, Fam40x40Price = 115,Fam50x50Price = 180, AlmGlutenfriPrice = 80, Topping = "Ost, TomatSauce" };
+        var Pizza3 = new Pizza() { Name = "Kebab", AlmPrice = 60,Fam40x40Price = 120, Fam50x50Price = 190,AlmGlutenfriPrice = 85,Topping = "Ost, TomatSauce, Salat, Kebab, Dressing" };
         List<Pizza> fakeRepo = new List<Pizza>() { Pizza1, Pizza2, Pizza3 };
 
         Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();

@@ -1,6 +1,4 @@
-﻿
-
-using AutoMapper;
+﻿using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Application.DTOs;
@@ -56,7 +54,7 @@ public class PizzaService : IPizzaService
         if (pizzaId != pizza.Id)
             throw new ValidationException("ID in body and route are different");
         var validation = _pizzaValidator.Validate(pizza);
-        if (!Pizza.IsValid)
+        if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
         return _pizzaRepository.UpdatePizza(pizza);
 

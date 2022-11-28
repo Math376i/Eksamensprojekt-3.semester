@@ -2,16 +2,11 @@
 
 public class Pizza
 {
-    public const bool IsValid = true;
 
     public int Id { get; set; }
     
     public string Name { get; set; }
-    
-    public int Price { get; set; }
-    
-    public string Topping { get; set; }
-    
+
     public int AlmPrice { get; set; }
     
     public int Fam40x40Price { get; set; }
@@ -20,4 +15,5 @@ public class Pizza
     
     public int AlmGlutenfriPrice { get; set; }
 
+    public string Topping { get; set; }
 }

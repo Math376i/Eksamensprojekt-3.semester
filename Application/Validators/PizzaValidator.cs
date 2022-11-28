@@ -3,20 +3,17 @@ using FluentValidation;
 
 namespace Application.Validators;
 
-public class PizzaValidator : AbstractValidator<PizzaValidator>
+public class PizzaValidator : AbstractValidator<Pizza>
 {
-   
-    public Pizza Topping { get; set; }
-
-    public int Price { get; set; }
-
-    public Pizza Name { get; set; }
-
-    public Pizza Validate(Pizza pizza)
+    
+    public PizzaValidator()
     {
         RuleFor(p => p.Name).NotEmpty();
-        RuleFor(p => p.Price).GreaterThan(0);
+        RuleFor(p => p.AlmPrice).GreaterThan(0);
+        RuleFor(p => p.Fam40x40Price).GreaterThan(0);
+        RuleFor(p => p.Fam50x50Price).GreaterThan(0);
+        RuleFor(p => p.AlmGlutenfriPrice).GreaterThan(0);
         RuleFor(p => p.Topping).NotEmpty();
-        return pizza;
+       
     }
 }
