@@ -18,6 +18,6 @@ public class Pizza
     
     public int Fam50x50Price { get; set; }
     
-    public int AlmGlutenPrice { get; set; }
+    public int AlmGlutenfriPrice { get; set; }
 
 }
