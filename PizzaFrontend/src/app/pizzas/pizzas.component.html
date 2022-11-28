@@ -1,0 +1,17 @@
+<h2>My Pizzas</h2>
+
+<ul class="pizzas">
+  <li *ngFor="let pizza of pizzas">
+    <button [class.selected]="pizza === selectedPizza" type="button" (click)="onSelect(pizza)">
+      <span class="badge">{{pizza.id}}</span>
+      <span class="name">{{pizza.name}}</span>
+      <span class="name">{{pizza.AlmPrice}}</span>
+      <span class="name">{{pizza.Fam40x40Price}}</span>
+      <span class="name">{{pizza.Fam50x50Price}}</span>
+      <span class="name">{{pizza.AlmGlutenfriPrice}}</span>
+      <span class="name">{{pizza.Topping}}</span>
+    </button>
+  </li>
+</ul>
+
+<app-pizza-detail [pizza]="selectedPizza"></app-pizza-detail>

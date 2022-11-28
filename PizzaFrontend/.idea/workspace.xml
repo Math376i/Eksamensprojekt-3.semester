@@ -2,12 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../PizzaTest/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaTest/UnitTest1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/message.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/message.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/messages/messages.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/messages/messages.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/messages/messages.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/messages/messages.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/mock-pizzas.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizza-detail/pizza-detail.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizza-detail/pizza-detail.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizza-detail/pizza-detail.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizza-detail/pizza-detail.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizza.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizza.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizza.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -21,20 +58,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Bruger/Documents/GitHub/CompulsorySDP/BoxFrontend",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Bruger\\Documents\\GitHub\\Eksamensprojekt-3.semester\\PizzaFrontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bruger/Documents/GitHub/CompulsorySDP/BoxFrontend&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Bruger\\Documents\\GitHub\\Eksamensprojekt-3.semester\\PizzaFrontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (PizzaFrontend)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
@@ -63,6 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1669282856620</updated>
       <workItem from="1669282857835" duration="1783000" />
+      <workItem from="1669628272228" duration="5160000" />
+      <workItem from="1669633552160" duration="1379000" />
     </task>
     <servers />
   </component>
