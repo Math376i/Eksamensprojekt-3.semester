@@ -1,15 +1,18 @@
-<h2>My Pizzas</h2>
+<body bgcolor="CB5E4B">
+
+<h2 style="color: #DDE3E4">Menukort</h2>
 
 <ul class="pizzas">
   <li *ngFor="let pizza of pizzas">
-    <label [class.selected]="pizza === selectedPizza" type="button" (click)="onSelect(pizza)">
-      <span class="id">{{pizza.id}} <span class="name">{{pizza.name}} </span>  </span>
-      <br>
-      <span class="Toppings">{{pizza.Topping}}</span>
+    <label>
+      <font style="color: #DDE3E4" size=+1 class="id">{{pizza.id}} </font>
+      <font style="color: #DDE3E4" size=+1 class="name">{{pizza.name}} </font>
+        <br> <font style="color: #DDE3E4" size=-1 class="Toppings">{{pizza.Topping}} </font>
+          <br> <br> <font style="color: #DDE3E4" size=3 class="AlmPrice">{{"AlmPrice "+pizza.AlmPrice+ ",-"}} </font> <button><font size=3 style="color:white">+</font></button>
+          <br> <br> <font style="color: #DDE3E4" size=3 class="Fam40x40Price">{{"Fam40x40 "+pizza.Fam40x40Price+ ",-"}} </font> <button><font size=3 style="color:white">+</font></button>
+            <br> <br> <font style="color: #DDE3E4" size=3 class="Fam50x50Price">{{"Fam50x50 "+pizza.Fam50x50Price+",-"}} </font> <button><font size=3 style="color:white">+</font></button>
+              <br> <br> <font style="color: #DDE3E4" size=3 class="AlmGlutenfriPrice">{{"AlmGlutenfri "+pizza.AlmGlutenfriPrice+",-"}} </font> <button><font size=3 style="color:white">+</font></button>
     </label>
-
-
   </li>
 </ul>
-
-<app-pizza-detail [pizza]="selectedPizza"></app-pizza-detail>
+</body>
