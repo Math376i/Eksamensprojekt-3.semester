@@ -11,13 +11,13 @@ export class HttpService {
   constructor() { }
 
   async getAllPizzas(){
-    const httpResponse = await customAxios.get<any>('pizza/GetAllPizzas')
-    return httpResponse.data;
+    const httpResult = await customAxios.get<any>('pizza/GetAllPizzas')
+    return httpResult.data;
   }
 
   async createPizza(dto: { Pizzaname: string, AlmPrice: number, Fam40x40Price: number, Fam50x50Price: number, AlmGlutenfriPrice: number, Topping: string }) {
-    const httpresult = await customAxios.post('pizza', dto);
-    return httpresult.data;
+    const httpResult = await customAxios.post('pizza', dto);
+    return httpResult.data;
   }
 
   async deletePizza(id: any) {

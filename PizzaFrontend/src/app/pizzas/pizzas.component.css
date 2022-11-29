@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.pizzas button {
+.pizzas label {
   flex: 1;
   cursor: pointer;
   position: relative;
@@ -24,28 +24,28 @@
   height: 1.8em;
 }
 
-.pizzas button:hover {
+.pizzas label:hover {
   color: #2c3a41;
   background-color: #e6e6e6;
   left: .1em;
 }
 
-.pizzas button:active {
+.pizzas label:active {
   background-color: #525252;
   color: #fafafa;
 }
 
-.pizzas button.selected {
+.pizzas label.selected {
   background-color: black;
   color: white;
 }
 
-.pizzas button.selected:hover {
+.pizzas label.selected:hover {
   background-color: #505050;
   color: white;
 }
 
-.pizzas button.selected:active {
+.pizzas label.selected:active {
   background-color: black;
   color: white;
 }

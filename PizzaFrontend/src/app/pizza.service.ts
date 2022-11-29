@@ -13,7 +13,7 @@ export class PizzaService {
 
   getPizzas(): Observable<Pizza[]> {
     const pizzas = of(PIZZAS);
-    this.messageService.add('PizzaService: fetched heroes');
+    this.messageService.add('PizzaService: fetched pizzas');
     return pizzas;
   }
 }
