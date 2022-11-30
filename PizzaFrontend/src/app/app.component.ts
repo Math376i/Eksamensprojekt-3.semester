@@ -7,7 +7,6 @@ import {HttpService} from "../services/http.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Mamma mia';
 
   PizzaName: string ="";
   Pizzas: any;
