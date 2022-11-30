@@ -27,7 +27,7 @@ export class AppComponent {
 
   async createPizza(){
     let dto = {
-      Pizzaname: this.PizzaName,
+      PizzaName: this.PizzaName,
       AlmPrice: this.AlmPrice,
       Fam40x40Price: this.Fam40x40Price,
       Fam50x50Price: this.Fam50x50Price,

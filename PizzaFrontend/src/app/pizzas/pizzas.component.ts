@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Pizza} from "../pizza";
+import {pizza} from "../pizza";
 import { PizzaService } from '../pizza.service';
 @Component({
   selector: 'app-pizzas',
@@ -9,7 +9,7 @@ import { PizzaService } from '../pizza.service';
 })
 export class PizzasComponent implements OnInit {
 
-  pizzas: Pizza[] = [];
+  pizzas: pizza[] = [];
 
   constructor(private pizzaService: PizzaService) { }
 

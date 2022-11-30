@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Pizza } from './pizza';
-import {PIZZAS} from './mock-pizzas';
+import { pizza } from './pizza';
+
 import { Observable, of } from 'rxjs';
+import {PIZZAS} from "./mock-pizzas";
 
 
 @Injectable({
@@ -11,7 +12,7 @@ export class PizzaService {
 
   constructor() { }
 
-  getPizzas(): Observable<Pizza[]> {
+  getPizzas(): Observable<pizza[]> {
     const pizzas = of(PIZZAS);
     return pizzas;
   }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import axios from "axios";
+import {pizza} from "../app/pizza";
 
 export const customAxios = axios.create({baseURL: 'http://localhost:5104/'})
 
@@ -11,11 +12,11 @@ export class HttpService {
   constructor() { }
 
   async getAllPizzas(){
-    const httpResult = await customAxios.get<any>('pizza/GetAllPizzas')
+    const httpResult = await customAxios.get<pizza>('pizza/GetAllPizzas')
     return httpResult.data;
   }
 
-  async createPizza(dto: { Pizzaname: string, AlmPrice: number, Fam40x40Price: number, Fam50x50Price: number, AlmGlutenfriPrice: number, Topping: string }) {
+  async createPizza(dto: { PizzaName: string, AlmPrice: number, Fam40x40Price: number, Fam50x50Price: number, AlmGlutenfriPrice: number, Topping: string }) {
     const httpResult = await customAxios.post('pizza', dto);
     return httpResult.data;
   }

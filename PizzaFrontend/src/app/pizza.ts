@@ -1,4 +1,4 @@
-export interface Pizza {
+export interface pizza {
   id: number;
   name: string;
   AlmPrice: number;
