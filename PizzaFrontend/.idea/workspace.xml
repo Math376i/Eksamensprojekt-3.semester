@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/mock-pizzas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/mock-pizzas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pizza.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizza.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pizza.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizza.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/http.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +78,7 @@
       <workItem from="1669633552160" duration="1379000" />
       <workItem from="1669705552781" duration="15327000" />
       <workItem from="1669791605341" duration="13252000" />
+      <workItem from="1669878618344" duration="3892000" />
     </task>
     <servers />
   </component>

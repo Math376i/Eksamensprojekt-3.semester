@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import axios from "axios";
 import {pizza} from "../app/pizza";
 
-export const customAxios = axios.create({baseURL: 'http://localhost:5104/'})
+export const customAxios = axios.create({baseURL: 'http://localhost:5000/'})
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class HttpService {
   constructor() { }
 
   async getAllPizzas(){
-    const httpResult = await customAxios.get<pizza>('pizza/GetAllPizzas')
+    const httpResult = await customAxios.get<any>('pizza')
     return httpResult.data;
   }
 
