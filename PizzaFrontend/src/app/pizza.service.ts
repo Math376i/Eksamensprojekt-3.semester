@@ -11,8 +11,5 @@ export class PizzaService {
 
   constructor() { }
 
-  getPizzas(): Observable<pizza[]> {
-    const pizzas = of(PIZZAS);
-    return pizzas;
-  }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {pizza} from "../pizza";
 import { PizzaService } from '../pizza.service';
+import {HttpService} from "../../services/http.service";
 @Component({
   selector: 'app-pizzas',
   templateUrl: './pizzas.component.html',
@@ -9,18 +10,17 @@ import { PizzaService } from '../pizza.service';
 })
 export class PizzasComponent implements OnInit {
 
-  pizzas: pizza[] = [];
+  pizzas: any;
 
-  constructor(private pizzaService: PizzaService) { }
+  constructor(private pizzaService: PizzaService, private httpService: HttpService) { }
 
   ngOnInit(): void {
     this.getPizzas();
   }
 
 
-  getPizzas(): void {
-    this.pizzaService.getPizzas()
-      .subscribe(pizzas => this.pizzas = pizzas);
+  async getPizzas() {
+   this.pizzas = await this.httpService.getAllPizzas()
   }
 
 }
