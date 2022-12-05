@@ -11,10 +11,12 @@ namespace API.Controllers;
 public class PizzaController : ControllerBase
 {
     private IPizzaService _pizzaService;
+    private IOrderService _orderService;
 
-    public PizzaController(IPizzaService service)
+    public PizzaController(IPizzaService service, IOrderService orderService)
     {
         _pizzaService = service;
+        _orderService = orderService;
     }
     
     [HttpGet]
@@ -79,5 +81,46 @@ public class PizzaController : ControllerBase
             return NotFound("No pizza found at ID " + id);
         }
     }
-    
+
+    [HttpGet]
+    [Route("GetAllOrders")]
+    public List<Order> GetAllOrders()
+    {
+        return _orderService.GetAllOrders();
+    }
+
+    [HttpPost]
+    [Route("CreateOrder")]
+    public ActionResult CreateNewOrder(OrderDTOs dto)
+    {
+        try
+        {
+            var result = _orderService.CreateNewOrder(dto);
+            return Created("order/" + result.orderId, result);
+
+        }
+        catch (ValidationException e)
+        {
+            return BadRequest(e.Message);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpDelete]
+  [Route("{OrderId}")]
+    public ActionResult<Order> DeleteOrder(int OrderId)
+    {
+        try
+        {
+            return Ok(_orderService.DeleteOrder(OrderId));
+
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No order found at id " + OrderId);
+        }
+    }
 }
