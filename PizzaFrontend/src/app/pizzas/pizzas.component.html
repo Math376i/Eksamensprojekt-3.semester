@@ -1,0 +1,46 @@
+<body bgcolor="CB5E4B">
+
+<h1 style="color: #DDE3E4">Mama Mia</h1>
+<h2 style="color: #DDE3E4">Menukort</h2>
+
+<ul class="order">
+  <label class="OrderBox">
+    <br>
+    <font class="CustomerInfo" size="5">Kunde information </font>
+    <br>
+    <br>
+    <label class="Name"> <font size=4> Navn: </font> </label>
+    <Input class="TextBox" type="text" id="Name" placeholder="Fornavn... Efternavn...">
+    <br><br>
+    <label class="Phone"> <font size=4> Telefon nr: </font> </label>
+    <Input class="TextBox" type="text" id="Phone" placeholder="Telefon nr...">
+    <br><br>
+    <label class="Email"> <font size=4> Email: </font> </label>
+    <Input class="TextBox" type="text" id="Email" placeholder="Email...">
+    <br>
+    ............................................................................
+    <br><br>
+    <font class="OrderInfo" size="5">Ordre information </font>
+    <br>
+  </label>
+</ul>
+
+<ul class="pizzas">
+  <li *ngFor="let pizza of pizzas">
+    <label>
+      <br>
+      <font size=+1 class="Id">{{pizza.id + "."}} </font>
+      <font size=+1 class="PizzaName">{{pizza.name}} </font>
+      <br> <font size=3 class="Toppings">{{pizza.topping}} </font>
+      <br> <br> <font size=3 class="AlmPrice">{{"AlmPrice: " + pizza.almPrice + ",-"}} </font>
+      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+      <br> <br> <font size=3 class="Fam40x40Price">{{"Fam40x40: " + pizza.fam40x40Price + ",-"}} </font>
+      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+      <br> <br> <font size=3 class="Fam50x50Price">{{"Fam50x50: " + pizza.fam50x50Price + ",-"}} </font>
+      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+      <br> <br> <font size=3 class="AlmGlutenfriPrice">{{"AlmGlutenfri: " + pizza.almGlutenfriPrice + ",-"}} </font>
+      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+    </label>
+  </li>
+</ul>
+</body>

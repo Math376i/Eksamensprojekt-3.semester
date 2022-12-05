@@ -1,0 +1,78 @@
+
+
+
+.order label.OrderBox {
+  flex: 1;
+  position: absolute;
+  background-color: rgba(218, 143, 124, 0.78);
+  margin: .5em;
+  margin-left: 1155px;
+  margin-right: 20px;
+  height: 36em;
+  width: 20em;
+}
+.order li {display: flex;}
+
+.order font.CustomerInfo{margin-left: 40px; font-weight: bold; color: #474747;}
+
+.order label.Name{margin-left: 20px; color: #474747;}
+
+.order label.Phone{margin-left: 20px; color: #474747;}
+
+.order label.Email{margin-left: 20px; color: #474747;}
+
+.order font.OrderInfo{margin-left: 40px; font-weight: bold; color: #474747;}
+
+.order input.TextBox{
+  position: absolute;
+  right: 14px;
+  height: 20px;
+  width: 150px;
+}
+
+.order font.Header {font-weight: bold; color: #474747;}
+
+.pizzas label {
+  flex: 1;
+  position: relative;
+  background-color: rgba(218, 143, 124, 0.78);
+  margin: .5em;
+  height: 18em;
+  width: 20em;
+  margin-right: 350px;
+  left: -21px;
+}
+
+.pizzas li {display: flex;}
+
+.pizzas font.Id{margin-left: 20px; font-weight: bold; color: #474747;}
+
+.pizzas font.PizzaName{font-weight: bold; color: #474747;}
+
+.pizzas font.Toppings{margin-left: 20px; color: #474747;}
+
+.pizzas font.AlmPrice{margin-left: 20px; font-weight: bold; color: #474747;}
+
+.pizzas font.Fam40x40Price{margin-left: 20px; font-weight: bold; color: #474747;}
+
+.pizzas font.Fam50x50Price{margin-left: 20px; font-weight: bold; color: #474747;}
+
+.pizzas font.AlmGlutenfriPrice{margin-left: 20px; font-weight: bold; color: #474747;}
+
+.pizzas font.BtnText{margin-left: 0px; color: white;}
+
+
+.pizzas button.BtnAdd {
+  background-color: #770000;
+  height: 25px;
+  width: 25px;
+  right: 14px;
+  position: absolute;
+  cursor:pointer;}
+
+.pizzas button:hover {background-color: rgb(189, 0, 0);}
+
+
+
+
+
