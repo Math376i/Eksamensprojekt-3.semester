@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Application/DTOs/OrderDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Domain/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API/db.db-shm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API/db.db-wal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaTest/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaTest/PizzaTest.cs" afterDir="false" />
-    </list>
+    <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,17 +26,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Bruger/Documents/GitHub/CompulsorySDP/BoxFrontend",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\math3\\RiderProjects\\Eksamensprojekt 3.semester\\PizzaFrontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bruger/Documents/GitHub/CompulsorySDP/BoxFrontend&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Bruger\\Documents\\GitHub\\Eksamensprojekt-3.semester\\PizzaFrontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (PizzaFrontend)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
@@ -81,8 +74,8 @@
       <workItem from="1669705552781" duration="15327000" />
       <workItem from="1669791605341" duration="13252000" />
       <workItem from="1669878618344" duration="4661000" />
-      <workItem from="1669968244345" duration="1507000" />
-      <workItem from="1670229517066" duration="804000" />
+      <workItem from="1669968244345" duration="2386000" />
+      <workItem from="1670226793558" duration="3266000" />
     </task>
     <servers />
   </component>
