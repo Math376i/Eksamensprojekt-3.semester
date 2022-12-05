@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="" />
+    <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../API/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/db.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizza.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizza.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/http.service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +84,7 @@
       <workItem from="1669791605341" duration="13252000" />
       <workItem from="1669878618344" duration="4661000" />
       <workItem from="1669968244345" duration="2386000" />
+      <workItem from="1670226793558" duration="2051000" />
     </task>
     <servers />
   </component>

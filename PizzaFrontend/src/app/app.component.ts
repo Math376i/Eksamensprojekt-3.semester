@@ -23,6 +23,7 @@ export class AppComponent implements OnInit{
   async ngOnInit() {
     const Pizzas = await this.http.getAllPizzas();
     this.Pizzas = Pizzas;
+
   }
 
   async createPizza(){

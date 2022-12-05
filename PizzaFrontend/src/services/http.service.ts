@@ -9,7 +9,8 @@ export const customAxios = axios.create({baseURL: 'http://localhost:5001/'})
 })
 export class HttpService {
 
-  constructor() { }
+  constructor() {
+  }
 
   async getAllPizzas(){
     const httpResult = await customAxios.get<any>('Pizza/GetAllPizzas')
