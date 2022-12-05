@@ -9,14 +9,14 @@ using Moq;
 
 namespace PizzaTest;
 
-public class UnitTest1
+public class PizzaTest
 {
     private IPizzaRepository _pizzaRepository;
     private IMapper _mapper;
     private PostPizzaValidator _postValidator;
     private PizzaValidator _pizzaValidator;
 
-    public UnitTest1()
+    public PizzaTest()
     {
         
     }
@@ -47,4 +47,5 @@ public class UnitTest1
         mockRepository.Verify(r => r.GetAllPizzas(), Times.Once);
     
     } 
+    
 }
