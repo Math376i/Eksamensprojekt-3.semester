@@ -15,6 +15,8 @@ var config = new MapperConfiguration(conf =>
 {
     conf.CreateMap<PizzaDTOs, Pizza>();
     conf.CreateMap<Pizza, PizzaDTOs>();
+    conf.CreateMap<OrderDTOs, Order>();
+    conf.CreateMap<Order, OrderDTOs>();
 });
 
 var mapper = config.CreateMapper();

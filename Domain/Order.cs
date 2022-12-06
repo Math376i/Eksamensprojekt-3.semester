@@ -5,13 +5,12 @@ namespace Domain;
 
 public class Order
 {
-    public int orderId { get; set; }
-    
-
-    public string Name { get; set; }
+    public int OrderId { get; set; }
+    public string CustomerName { get; set; }
 
     public int PhoneNumber { get; set; }
     
     public string Email { get; set; }
+    
     
 }  

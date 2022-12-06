@@ -20,10 +20,11 @@ public class PizzaController : ControllerBase
     }
     
     [HttpGet]
-    [Route("RebuildDB")]
-    public string RebuildDB()
+    [Route("RebuildDb")]
+    public string RebuildDb()
     {
         _pizzaService.RebuildDB();
+        _orderService.RebuildDB();
         return "Db has been created";
     }
     
@@ -36,7 +37,7 @@ public class PizzaController : ControllerBase
     
     [HttpPost]
     [Route("CreatePizza")]
-    public ActionResult CreateNewBox(PizzaDTOs dto)
+    public ActionResult CreateNewPizza(PizzaDTOs dto)
     {
         try
         {
@@ -59,7 +60,7 @@ public class PizzaController : ControllerBase
         {
             return Ok(_pizzaService.Updatepizza(pizza.Id ,pizza));
         }
-        catch (KeyNotFoundException e)
+        catch (KeyNotFoundException)
         {
             return NotFound("No box found at ID " + pizza.Id);
         }
@@ -69,16 +70,16 @@ public class PizzaController : ControllerBase
         }
     }
     [HttpDelete]
-    [Route("{id}")]
-    public ActionResult<Pizza> DeletePizza(int id)
+    [Route("DeletePizza{Id}")]
+    public ActionResult<Pizza> DeletePizza(int Id)
     {
         try
         {
-            return Ok(_pizzaService.DeletePizza(id));
+            return Ok(_pizzaService.DeletePizza(Id));
         }
-        catch (KeyNotFoundException e)
+        catch (KeyNotFoundException)
         {
-            return NotFound("No pizza found at ID " + id);
+            return NotFound("No pizza found at ID " + Id);
         }
     }
 
@@ -96,8 +97,7 @@ public class PizzaController : ControllerBase
         try
         {
             var result = _orderService.CreateNewOrder(dto);
-            return Created("order/" + result.orderId, result);
-
+            return Created("order/" + result.OrderId, result);
         }
         catch (ValidationException e)
         {
@@ -108,19 +108,19 @@ public class PizzaController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-
+    
     [HttpDelete]
-  [Route("{OrderId}")]
-    public ActionResult<Order> DeleteOrder(int OrderId)
+    [Route("DeleteOrder{orderId}")]
+    public ActionResult<Order> DeleteOrder(int orderId)
     {
         try
         {
-            return Ok(_orderService.DeleteOrder(OrderId));
+            return Ok(_orderService.DeleteOrder(orderId));
 
         }
-        catch (KeyNotFoundException e)
+        catch (KeyNotFoundException)
         {
-            return NotFound("No order found at id " + OrderId);
+            return NotFound("No order found at id " + orderId);
         }
     }
 }

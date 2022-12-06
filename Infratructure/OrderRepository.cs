@@ -8,12 +8,16 @@ public class OrderRepository : IOrderRepository
     private PizzaDbContext _pizzaContext;
 
 
-    public OrderRepository(PizzaDbContext context)
+    public OrderRepository()
     {
-        _pizzaContext = context;
+        
     }
     
-        
+    public void RebuildDB()
+    {
+        _pizzaContext.Database.EnsureDeleted();
+        _pizzaContext.Database.EnsureCreated();
+    }
     public List<Order> GetAllOrders()
     {
         return _pizzaContext.OrderTable.ToList();

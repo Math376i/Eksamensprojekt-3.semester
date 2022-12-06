@@ -15,6 +15,10 @@ public class PizzaDbContext : DbContext
         modelBuilder.Entity<Pizza>()
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
+        
+        modelBuilder.Entity<Order>()
+            .Property(o => o.OrderId)
+            .ValueGeneratedOnAdd();
     }
     
     public DbSet<Pizza> PizzaTable { get; set; }

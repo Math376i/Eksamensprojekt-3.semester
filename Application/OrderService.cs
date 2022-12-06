@@ -22,6 +22,11 @@ public class OrderService : IOrderService
         _mapper = mapper;
 
     }
+    public void RebuildDB()
+    {
+        _orderRepository.RebuildDB();
+    }
+    
     public List<Order> GetAllOrders()
     {
         return _orderRepository.GetAllOrders();
@@ -33,7 +38,6 @@ public class OrderService : IOrderService
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
         return _orderRepository.CreateNewOrder(_mapper.Map<Order>(dto));
-        
     }
 
     public Order DeleteOrder(int orderId)

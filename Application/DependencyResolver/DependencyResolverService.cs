@@ -7,6 +7,7 @@ public class DependencyResolverService
 {
     public static void RegisterApplicationLayer(IServiceCollection services)
     {
-        services.AddScoped<IPizzaService, PizzaService>(); 
+        services.AddScoped<IPizzaService, PizzaService>();
+        services.AddScoped<IOrderService, OrderService>();
     }
 }

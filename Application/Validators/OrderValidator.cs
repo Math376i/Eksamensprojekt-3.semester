@@ -7,7 +7,7 @@ public class OrderValidator : AbstractValidator<Order>
 {
     public OrderValidator()
     {
-        RuleFor(o => o.Name).NotEmpty();
+        RuleFor(o => o.CustomerName).NotEmpty();
         RuleFor(o => o.PhoneNumber).NotEmpty();
         RuleFor(o => o.Email).NotEmpty();
     }
