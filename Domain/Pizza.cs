@@ -16,4 +16,10 @@ public class Pizza
     public int AlmGlutenfriPrice { get; set; }
 
     public string Topping { get; set; }
+    
+    public ICollection<Order> Orders { get; set; }
+
+    public Order order { get; set; }
+    
+    public PizzaOrder PizzaOrder { get; set; }
 }

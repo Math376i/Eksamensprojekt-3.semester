@@ -24,7 +24,7 @@ public class PizzaController : ControllerBase
     public string RebuildDb()
     {
         _pizzaService.RebuildDB();
-        _orderService.RebuildDB();
+        
         return "Db has been created";
     }
     

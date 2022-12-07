@@ -5,7 +5,7 @@ namespace Application.Interfaces;
 
 public interface IOrderService
 {
-    public void RebuildDB();
+    
     List<Order> GetAllOrders();
 
     Order CreateNewOrder(OrderDTOs dto);

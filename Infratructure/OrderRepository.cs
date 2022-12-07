@@ -13,11 +13,7 @@ public class OrderRepository : IOrderRepository
         
     }
     
-    public void RebuildDB()
-    {
-        _pizzaContext.Database.EnsureDeleted();
-        _pizzaContext.Database.EnsureCreated();
-    }
+    
     public List<Order> GetAllOrders()
     {
         return _pizzaContext.OrderTable.ToList();
@@ -36,6 +32,6 @@ public class OrderRepository : IOrderRepository
         _pizzaContext.OrderTable.Remove(orderToDelete);
         _pizzaContext.SaveChanges();
         return orderToDelete;
-
     }
+    
 }

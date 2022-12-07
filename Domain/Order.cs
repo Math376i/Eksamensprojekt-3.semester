@@ -12,5 +12,12 @@ public class Order
     
     public string Email { get; set; }
     
-    
+    public Pizza OrderPizza { get; set; }
+
+    public int PizzaId { get; set; }
+
+    public PizzaOrder PizzaOrder { get; set; }
+
+    public ICollection<Pizza> Pizzas { get; set; }
+
 }  

@@ -2,21 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Infratructure/OrderDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Domain/PizzaOrder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../API/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../API/db.db-shm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../API/db.db-wal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/DTOs/OrderDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DTOs/OrderDTOs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Validators/OrderValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Validators/OrderValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Validators/PostOrderValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Validators/PostOrderValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IOrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IOrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IOrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IOrderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/OrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/OrderService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Domain/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Domain/Pizza.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Pizza.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Infratructure/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/OrderRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,8 @@
       <workItem from="1669878618344" duration="4661000" />
       <workItem from="1669968244345" duration="2386000" />
       <workItem from="1670226793558" duration="3266000" />
-      <workItem from="1670310134227" duration="1357000" />
+      <workItem from="1670310134227" duration="1359000" />
+      <workItem from="1670404007097" duration="2612000" />
     </task>
     <servers />
   </component>

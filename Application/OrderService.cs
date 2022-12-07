@@ -22,10 +22,7 @@ public class OrderService : IOrderService
         _mapper = mapper;
 
     }
-    public void RebuildDB()
-    {
-        _orderRepository.RebuildDB();
-    }
+    
     
     public List<Order> GetAllOrders()
     {
