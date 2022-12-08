@@ -1,3 +1,4 @@
+using System.Globalization;
 using Application;
 using Application.DTOs;
 using Application.Interfaces;
@@ -17,6 +18,8 @@ var config = new MapperConfiguration(conf =>
     conf.CreateMap<Pizza, PizzaDTOs>();
     conf.CreateMap<OrderDTOs, Order>();
     conf.CreateMap<Order, OrderDTOs>();
+    conf.CreateMap<PizzaUpdateDTOs, Pizza>();
+    conf.CreateMap<Pizza, PizzaUpdateDTOs>();
 });
 
 var mapper = config.CreateMapper();

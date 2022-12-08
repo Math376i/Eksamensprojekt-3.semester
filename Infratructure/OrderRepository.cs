@@ -6,13 +6,11 @@ namespace Infrastructure;
 public class OrderRepository : IOrderRepository
 {
     private PizzaDbContext _pizzaContext;
-
-
-    public OrderRepository()
-    {
-        
-    }
     
+    public OrderRepository(PizzaDbContext context)
+    {
+        _pizzaContext = context;
+    }
     
     public List<Order> GetAllOrders()
     {

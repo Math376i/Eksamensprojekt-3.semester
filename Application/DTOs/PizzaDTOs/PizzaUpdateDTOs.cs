@@ -1,8 +1,7 @@
-﻿namespace Domain;
+﻿namespace Application.DTOs;
 
-public class Pizza
+public class PizzaUpdateDTOs
 {
-
     public int Id { get; set; }
     
     public string Name { get; set; }
@@ -16,6 +15,4 @@ public class Pizza
     public int AlmGlutenfriPrice { get; set; }
 
     public string Topping { get; set; }
-    public PizzaOrder? PizzaOrders { get; set; }
-
 }

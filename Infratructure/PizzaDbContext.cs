@@ -1,5 +1,6 @@
 ﻿using Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations.Internal;
 
 namespace Infrastructure;
 
@@ -20,27 +21,43 @@ public class PizzaDbContext : DbContext
         modelBuilder.Entity<Order>()
             .Property(o => o.OrderId)
             .ValueGeneratedOnAdd();
+        
+        modelBuilder.Entity<PizzaOrder>()
+            .HasKey(a => new { a.PizzaId, a.OrderId });
 
         modelBuilder.Entity<Order>()
-            .HasOne(order => order.OrderPizza)
-            .WithMany(pizza => pizza.Orders)
-            .HasForeignKey(order => order.PizzaId)
+            .HasMany<PizzaOrder>(o => o.PizzaOrders)
+            .WithOne(p => p.order)
+            .HasForeignKey(p => p.OrderId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        modelBuilder.Entity<Order>()
-            .HasOne<PizzaOrder>(o => o.PizzaOrder)
-            .WithOne(p => p.order)
-            .HasForeignKey<PizzaOrder>(po => po.OrderId);
-
         modelBuilder.Entity<Pizza>()
-            .HasOne<PizzaOrder>(p => p.PizzaOrder)
-            .WithOne(l => l.pizza)
-            .HasForeignKey<PizzaOrder>(po => po.PizzaId);
+            .HasOne<PizzaOrder>(p => p.PizzaOrders)
+            .WithMany( p => p.pizza)
+            .HasForeignKey(p => p.Id)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<PizzaOrder>()
+            .HasMany<Pizza>(p => p.pizza)
+            .WithOne(l => l.PizzaOrders);
+        
+        modelBuilder.Entity<PizzaOrder>()
+            .HasOne<Order>(p => p.order)
+            .WithMany(l => l.PizzaOrders);
+        
+        modelBuilder.Entity<PizzaOrder>()
+              .Ignore(p => p.pizza);
+          modelBuilder.Entity<PizzaOrder>()
+              .Ignore(p => p.order);
+          modelBuilder.Entity<Pizza>()
+              .Ignore(p => p.PizzaOrders);
+          modelBuilder.Entity<Order>()
+              .Ignore(p => p.PizzaOrders);
     }
     
     public DbSet<Pizza> PizzaTable { get; set; }
 
-    public DbSet<PizzaOrder> PizzaOrderTable { get; set; }
+    public DbSet<Pizza> PizzaOrderTable { get; set; }
 
     public DbSet<Order> OrderTable { get; set; }
 }

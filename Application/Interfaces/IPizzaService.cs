@@ -13,5 +13,5 @@ public interface IPizzaService
     Pizza CreateNewPizza(PizzaDTOs dto);
     public Pizza DeletePizza(int Id);
     
-    public Pizza Updatepizza(int pizzaId, Pizza pizza);
+    public Pizza Updatepizza(int pizzaId, PizzaUpdateDTOs dto);
 }

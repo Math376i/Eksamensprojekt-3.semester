@@ -49,14 +49,14 @@ public class PizzaService : IPizzaService
         return _pizzaRepository.DeletePizza(id);
     }
 
-    public Pizza Updatepizza(int pizzaId, Pizza pizza)
+    public Pizza Updatepizza(int pizzaId, PizzaUpdateDTOs dto)
     {
-        if (pizzaId != pizza.Id)
+        if (pizzaId != dto.Id)
             throw new ValidationException("ID in body and route are different");
-        var validation = _pizzaValidator.Validate(pizza);
+        var validation = _pizzaValidator.Validate(_mapper.Map<Pizza>(dto));
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        return _pizzaRepository.UpdatePizza(pizza);
+        return _pizzaRepository.UpdatePizza(_mapper.Map<Pizza>(dto));
 
     }
 }

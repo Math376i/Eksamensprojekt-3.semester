@@ -12,11 +12,13 @@ public class PizzaController : ControllerBase
 {
     private IPizzaService _pizzaService;
     private IOrderService _orderService;
+    private IPizzaOrderService _pizzaOrderService;
 
-    public PizzaController(IPizzaService service, IOrderService orderService)
+    public PizzaController(IPizzaService service, IOrderService orderService, IPizzaOrderService pizzaOrderService)
     {
         _pizzaService = service;
         _orderService = orderService;
+        _pizzaOrderService = pizzaOrderService;
     }
     
     [HttpGet]
@@ -54,15 +56,15 @@ public class PizzaController : ControllerBase
         }
     }
     [HttpPut]
-    public ActionResult<Pizza> UpdatePizza([FromBody] Pizza pizza)
+    public ActionResult<Pizza> UpdatePizza([FromBody] PizzaUpdateDTOs dto)
     {
         try
         {
-            return Ok(_pizzaService.Updatepizza(pizza.Id ,pizza));
+            return Ok(_pizzaService.Updatepizza(dto.Id ,dto));
         }
         catch (KeyNotFoundException)
         {
-            return NotFound("No box found at ID " + pizza.Id);
+            return NotFound("No box found at ID " + dto.Id);
         }
         catch (Exception e)
         {
@@ -92,7 +94,7 @@ public class PizzaController : ControllerBase
 
     [HttpPost]
     [Route("CreateOrder")]
-    public ActionResult CreateNewOrder(OrderDTOs dto)
+    public ActionResult CreateNewOrder([FromBody] OrderDTOs dto)
     {
         try
         {
@@ -122,5 +124,26 @@ public class PizzaController : ControllerBase
         {
             return NotFound("No order found at id " + orderId);
         }
+    }
+
+    [HttpPost]
+    [Route("PizzaToOrder")]
+    public Pizza PizzaToOrder(Pizza pizza)
+    {
+        try
+        {
+            var result = _pizzaOrderService.PizzaToOrder(pizza);
+            return Created("pizza/")
+
+        }
+        catch (ValidationException e)
+        {
+            return BadRequest(e.Message);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+        
     }
 }
