@@ -127,13 +127,13 @@ public class PizzaController : ControllerBase
     }
 
     [HttpPost]
-    [Route("PizzaToOrder")]
-    public Pizza PizzaToOrder(Pizza pizza)
+    [Route("AddPizzaToOrder")]
+    public ActionResult<Pizza> PizzaToOrder(PizzaDTOs dto)
     {
         try
         {
-            var result = _pizzaOrderService.PizzaToOrder(pizza);
-            return Created("pizza/")
+            var result = _pizzaOrderService.PizzaToOrder(dto);
+            return Created("pizza/" + result.Id, result);
 
         }
         catch (ValidationException e)
@@ -144,6 +144,26 @@ public class PizzaController : ControllerBase
         {
             return StatusCode(500, e.Message);
         }
-        
+    }
+    
+    [HttpGet]
+    [Route("GetPizzaFromOrder")]
+    public List<Pizza> GetPizzaFromOrder()
+    {
+        return _pizzaOrderService.GetPizzaFromOrder();
+    }
+    
+    [HttpDelete]
+    [Route("DeletePizzaFromOrder")]
+    public ActionResult<Pizza> DeletePizzaFromOrder(int id)
+    {
+        try
+        {
+            return Ok(_pizzaOrderService.DeletePizzaFromOrder(id));
+        }
+        catch (KeyNotFoundException)
+        {
+            return NotFound("No pizza found at ID " + id);
+        }
     }
 }

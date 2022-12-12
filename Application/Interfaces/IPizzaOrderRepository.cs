@@ -4,5 +4,12 @@ namespace Application.Interfaces;
 
 public interface IPizzaOrderRepository
 {
-    public List<Pizza> PizzaToOrder(Pizza pizza);
+    public Pizza PizzaToOrder(Pizza pizza);
+
+    List<Pizza> GetPizzaFromOrder();
+    
+    public Pizza DeletePizzaFromOrder(int id);
+
+
+
 }

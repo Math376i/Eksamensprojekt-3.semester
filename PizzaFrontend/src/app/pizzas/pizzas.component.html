@@ -21,7 +21,11 @@
     ............................................................................
     <br><br>
     <font class="OrderInfo" size="5">Ordre information </font>
-
+<label>
+  <li *ngFor="let pizza of pizzasOrdered">
+  <font class="PizzasOrdered"> {{"nr." + pizza.id + "." + pizza.name + pizza.Price}} </font>
+  </li>
+</label>
     <br>
   </label>
 </ul>

@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.DTOs;
+using Application.Interfaces;
 using AutoMapper;
 using Domain;
 
@@ -14,8 +15,18 @@ public class PizzaOrderService : IPizzaOrderService
         _repository = repository;
     }
 
-    public List<Pizza> PizzaToOrder(Pizza pizza)
+    public Pizza PizzaToOrder(PizzaDTOs dto)
     {
-        return _repository.PizzaToOrder(pizza);
+        return _repository.PizzaToOrder(_mapper.Map<Pizza>(dto));
+    }
+
+    public List<Pizza> GetPizzaFromOrder()
+    {
+        return _repository.GetPizzaFromOrder();
+    }
+
+    public Pizza DeletePizzaFromOrder(int id)
+    {
+        return _repository.DeletePizzaFromOrder(id);
     }
 }

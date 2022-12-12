@@ -11,16 +11,22 @@ import {HttpService} from "../../services/http.service";
 export class PizzasComponent implements OnInit {
 
   pizzas: any;
+  pizzasOrdered: any;
 
   constructor(private pizzaService: PizzaService, private httpService: HttpService) { }
 
   ngOnInit(): void {
     this.getPizzas();
+    this.getPizzasOrdered();
   }
 
 
   async getPizzas() {
    this.pizzas = await this.httpService.getAllPizzas()
+  }
+
+  async getPizzasOrdered() {
+    this.pizzasOrdered = await this.httpService.getPizzaFromOrder()
   }
 
 }
