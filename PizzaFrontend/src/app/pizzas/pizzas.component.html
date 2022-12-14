@@ -21,31 +21,29 @@
     ............................................................................
     <br><br>
     <font class="OrderInfo" size="5">Ordre information </font>
-<label>
-  <li *ngFor="let pizza of pizzasOrdered">
-  <font class="PizzasOrdered"> {{"nr." + pizza.id + "." + pizza.name + pizza.Price}} </font>
-  </li>
-</label>
+    <button class = "Order" (click)="buy"> </button>
     <br>
-  </label>
+    </label>
+
 </ul>
 
 <ul class="pizzas">
-  <li *ngFor="let pizza of pizzas">
+  <li *ngFor="let pizza of MenuPizzas">
     <label>
       <br>
       <font size=+1 class="Id">{{pizza.id + "."}} </font>
       <font size=+1 class="PizzaName">{{pizza.name}} </font>
       <br> <font size=3 class="Toppings">{{pizza.topping}} </font>
       <br> <br> <font size=3 class="AlmPrice">{{"AlmPrice: " + pizza.almPrice + ",-"}} </font>
-      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+      <button class="BtnAdd" (click)="add(pizza.almPrice)"><font size=3 class="BtnText">+</font></button>
       <br> <br> <font size=3 class="Fam40x40Price">{{"Fam40x40: " + pizza.fam40x40Price + ",-"}} </font>
-      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+      <button class="BtnAdd" (click)="add(pizza.fam40x40Price)"><font size=3 class="BtnText">+</font></button>
       <br> <br> <font size=3 class="Fam50x50Price">{{"Fam50x50: " + pizza.fam50x50Price + ",-"}} </font>
-      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+      <button class="BtnAdd" (click)="add(pizza.fam50x50Price)"><font size=3 class="BtnText">+</font></button>
       <br> <br> <font size=3 class="AlmGlutenfriPrice">{{"AlmGlutenfri: " + pizza.almGlutenfriPrice + ",-"}} </font>
-      <button class="BtnAdd"><font size=3 class="BtnText">+</font></button>
+      <button class="BtnAdd" (click)="add(pizza.almGlutenfriPrice)"><font size=3 class="BtnText">+</font></button>
     </label>
   </li>
 </ul>
 </body>
+

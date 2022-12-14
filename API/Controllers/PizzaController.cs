@@ -1,3 +1,4 @@
+using Application;
 using Application.DTOs;
 using Application.Interfaces;
 using Domain;
@@ -12,13 +13,11 @@ public class PizzaController : ControllerBase
 {
     private IPizzaService _pizzaService;
     private IOrderService _orderService;
-    private IPizzaOrderService _pizzaOrderService;
 
-    public PizzaController(IPizzaService service, IOrderService orderService, IPizzaOrderService pizzaOrderService)
+    public PizzaController(IPizzaService service, IOrderService orderService)
     {
         _pizzaService = service;
         _orderService = orderService;
-        _pizzaOrderService = pizzaOrderService;
     }
     
     [HttpGet]
@@ -32,9 +31,9 @@ public class PizzaController : ControllerBase
     
     [HttpGet]
     [Route("GetAllPizzas")]
-    public List<Pizza> GetAllPizzas()
+    public List<Pizza> getPizzaFromOrder(string email)
     {
-        return _pizzaService.GetAllPizzas();
+        return _pizzaService.getPizzaFromOrder(email);
     }
     
     [HttpPost]
@@ -50,17 +49,17 @@ public class PizzaController : ControllerBase
         {
             return BadRequest(e.Message);
         }
-        catch (Exception e)
+       /* catch (Exception e)
         {
             return StatusCode(500, e.Message);
-        }
+        }*/
     }
     [HttpPut]
     public ActionResult<Pizza> UpdatePizza([FromBody] PizzaUpdateDTOs dto)
     {
         try
         {
-            return Ok(_pizzaService.Updatepizza(dto.Id ,dto));
+            return Ok(_pizzaService.UpdatePizza(dto.Id ,dto));
         }
         catch (KeyNotFoundException)
         {
@@ -126,44 +125,38 @@ public class PizzaController : ControllerBase
         }
     }
 
-    [HttpPost]
-    [Route("AddPizzaToOrder")]
-    public ActionResult<Pizza> PizzaToOrder(PizzaDTOs dto)
+    [HttpGet]
+    [Route("GetOrderIdByEmail")]
+    public ActionResult<Order> GetOrderIdByEmail(string email)
     {
         try
         {
-            var result = _pizzaOrderService.PizzaToOrder(dto);
-            return Created("pizza/" + result.Id, result);
-
+            return Ok(_orderService.GetOrderIdByEmail(email));
         }
-        catch (ValidationException e)
+        catch (KeyNotFoundException)
         {
-            return BadRequest(e.Message);
-        }
-        catch (Exception e)
-        {
-            return StatusCode(500, e.Message);
+            return NotFound("No order found at email" + email);
         }
     }
-    
+
     [HttpGet]
     [Route("GetPizzaFromOrder")]
-    public List<Pizza> GetPizzaFromOrder()
+    public List<Pizza> GetPizzaFromOrder(string email)
     {
-        return _pizzaOrderService.GetPizzaFromOrder();
+        return _pizzaService.getPizzaFromOrder(email);
     }
     
     [HttpDelete]
     [Route("DeletePizzaFromOrder")]
-    public ActionResult<Pizza> DeletePizzaFromOrder(int id)
+    public ActionResult<Order> DeletePizzaFromOrder(int id)
     {
         try
         {
-            return Ok(_pizzaOrderService.DeletePizzaFromOrder(id));
+            return Ok(_orderService.DeleteOrder(id));
         }
         catch (KeyNotFoundException)
         {
             return NotFound("No pizza found at ID " + id);
         }
-    }
+    } 
 }

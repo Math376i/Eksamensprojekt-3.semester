@@ -2,22 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Application/Validators/PriceValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Domain/Price.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Order.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/DTOs/PizzaDTOs/PizzaDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DTOs/PizzaDTOs/PizzaDTOs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/DTOs/PizzaDTOs/PizzaUpdateDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DTOs/PizzaDTOs/PizzaUpdateDTOs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/PizzaOrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/PizzaOrderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Validators/PizzaValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Validators/PizzaValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Validators/PostPizzaValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Validators/PostPizzaValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IOrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IOrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IOrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IOrderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/OrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/OrderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/PizzaOrderService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/PizzaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/PizzaService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Validators/PriceValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Domain/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Order.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Domain/Pizza.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Pizza.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Eksamensprojekt 3.semester.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../Eksamensprojekt 3.semester.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaOrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaOrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Domain/PizzaOrder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Domain/Price.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infratructure/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/OrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaOrderRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/mock-pizzas.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizza.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizza.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pizza.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizza.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/http.service.ts" afterDir="false" />
@@ -101,6 +117,8 @@
       <workItem from="1670404007097" duration="2612000" />
       <workItem from="1670485728155" duration="1862000" />
       <workItem from="1670831669077" duration="5107000" />
+      <workItem from="1670923135131" duration="9975000" />
+      <workItem from="1671006809933" duration="3649000" />
     </task>
     <servers />
   </component>

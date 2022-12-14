@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { pizza } from './pizza';
 
 import { Observable, of } from 'rxjs';
-import {PIZZAS} from "./mock-pizzas";
+
 
 @Injectable({
   providedIn: 'root'

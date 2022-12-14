@@ -23,6 +23,8 @@
 
 .order font.OrderInfo{margin-left: 40px; font-weight: bold; color: #474747;}
 
+.order.pizzaOrder label.OrderId{margin-left: 40px}
+
 .order input.TextBox{
   position: absolute;
   right: 14px;

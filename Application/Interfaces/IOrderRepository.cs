@@ -9,4 +9,6 @@ public interface IOrderRepository
 
     Order CreateNewOrder(Order order);
     Order DeleteOrder(int orderId);
+
+    public Order GetOrderIdByEmail(string email);
 }

@@ -12,6 +12,4 @@ public class Order
     
     public string Email { get; set; }
 
-    public List<PizzaOrder>? PizzaOrders { get; set; }
-
 }  

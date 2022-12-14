@@ -14,14 +14,16 @@ public class PizzaService : IPizzaService
     private IMapper _mapper;
     private PostPizzaValidator _postValidator;
     private PizzaValidator _pizzaValidator;
+    private IOrderService _orderService;
 
     public PizzaService(IPizzaRepository repository, IMapper mapper, PostPizzaValidator postValidator,
-        PizzaValidator pizzaValidator)
+        PizzaValidator pizzaValidator, IOrderService orderService)
     {
         _pizzaRepository = repository;
         _mapper = mapper;
         _postValidator = postValidator;
         _pizzaValidator = pizzaValidator;
+        _orderService = orderService;
     }
 
     public void RebuildDB()
@@ -29,9 +31,10 @@ public class PizzaService : IPizzaService
         _pizzaRepository.RebuildDB();
     }
 
-    public List<Pizza> GetAllPizzas()
+    public List<Pizza> getPizzaFromOrder(string email)
     {
-        return _pizzaRepository.GetAllPizzas();
+        var order = _orderService.GetOrderIdByEmail(email);
+        return _pizzaRepository.GetPizzaFromOrder(order.OrderId);
     }
 
     public Pizza CreateNewPizza(PizzaDTOs dto)
@@ -39,8 +42,17 @@ public class PizzaService : IPizzaService
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
+        
+        Pizza pizza = new Pizza();
 
-        return _pizzaRepository.CreateNewPizza(_mapper.Map<Pizza>(dto));
+        pizza.Name = dto.Name;
+        pizza.AlmPrice = dto.AlmPrice;
+        pizza.Fam40x40Price = dto.Fam40x40Price;
+        pizza.Fam50x50Price = dto.Fam50x50Price;
+        pizza.AlmGlutenfriPrice = dto.AlmGlutenfriPrice;
+        pizza.OrderId = _orderService.GetOrderIdByEmail(dto.Email).OrderId;
+
+        return pizza;
     }
 
     public Pizza DeletePizza(int id)
@@ -49,7 +61,7 @@ public class PizzaService : IPizzaService
         return _pizzaRepository.DeletePizza(id);
     }
 
-    public Pizza Updatepizza(int pizzaId, PizzaUpdateDTOs dto)
+    public Pizza UpdatePizza(int pizzaId, PizzaUpdateDTOs dto)
     {
         if (pizzaId != dto.Id)
             throw new ValidationException("ID in body and route are different");
