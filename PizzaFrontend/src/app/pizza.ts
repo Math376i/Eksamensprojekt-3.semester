@@ -5,13 +5,17 @@ export interface pizza {
 
   name: string;
 
-  AlmPrice : number;
+  price : number
 
-  Fam40x40Price : number;
+  almPrice : number;
 
-  Fam50x50Price : number;
+  fam40x40Price : number;
 
-  AlmGlutenfriPrice: number;
+  fam50x50Price : number;
 
-  Topping: string;
+  almGlutenfriPrice: number;
+
+  topping: string;
+
+  email: string;
 }

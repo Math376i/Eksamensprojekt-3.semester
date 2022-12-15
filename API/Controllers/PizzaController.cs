@@ -28,10 +28,17 @@ public class PizzaController : ControllerBase
         
         return "Db has been created";
     }
-    
+
     [HttpGet]
     [Route("GetAllPizzas")]
-    public List<Pizza> getPizzaFromOrder(string email)
+    public List<Pizza> GetAllPizzas()
+    {
+        return _pizzaService.GetAllPizzas();
+    }
+
+    [HttpGet]
+    [Route("GetPizzaFromOrder")]
+    public List<Pizza> GetPizzasFromOrder(string email)
     {
         return _pizzaService.getPizzaFromOrder(email);
     }
@@ -49,7 +56,7 @@ public class PizzaController : ControllerBase
         {
             return BadRequest(e.Message);
         }
-       /* catch (Exception e)
+      /*  catch (Exception e)
         {
             return StatusCode(500, e.Message);
         }*/
@@ -139,13 +146,6 @@ public class PizzaController : ControllerBase
         }
     }
 
-    [HttpGet]
-    [Route("GetPizzaFromOrder")]
-    public List<Pizza> GetPizzaFromOrder(string email)
-    {
-        return _pizzaService.getPizzaFromOrder(email);
-    }
-    
     [HttpDelete]
     [Route("DeletePizzaFromOrder")]
     public ActionResult<Order> DeletePizzaFromOrder(int id)

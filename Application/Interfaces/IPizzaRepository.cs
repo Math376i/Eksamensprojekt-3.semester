@@ -8,6 +8,8 @@ public interface IPizzaRepository
 {
     public void RebuildDB();
     List<Pizza> GetPizzaFromOrder(int orderId);
+
+    public List<Pizza> GetAllPizzas();
     
     Pizza CreateNewPizza(Pizza pizza);
     

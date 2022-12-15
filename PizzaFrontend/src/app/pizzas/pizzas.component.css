@@ -8,9 +8,35 @@
   margin: .5em;
   margin-left: 1155px;
   margin-right: 20px;
-  height: 36em;
+  height: 18em;
   width: 20em;
 }
+
+.order label.PizzasOrdered {
+  flex: 1;
+  position: absolute;
+  background-color: rgba(218, 143, 124, 0.78);
+  margin: .5em;
+  margin-top: 20em;
+  margin-left: 1155px;
+  margin-right: 20px;
+  height: 18em;
+  width: 20em;
+
+}
+
+.order font.Id{
+  margin-left: 25px;
+}
+
+.order font.PizzaPrice{
+  position: absolute;
+  margin-right: 20px;
+  right: 20px;
+}
+
+
+
 .order li {display: flex;}
 
 .order font.CustomerInfo{margin-left: 40px; font-weight: bold; color: #474747;}
@@ -23,14 +49,22 @@
 
 .order font.OrderInfo{margin-left: 40px; font-weight: bold; color: #474747;}
 
-.order.pizzaOrder label.OrderId{margin-left: 40px}
+.order input{position: absolute; right: 14px; height: 20px; width: 150px;}
 
-.order input.TextBox{
+.order font.BtnText {color: white}
+
+.order button.BtnOrder{
   position: absolute;
-  right: 14px;
-  height: 20px;
-  width: 150px;
+  background-color: #770000;
+  height: 30px;
+  width: 120px;
+  margin-top: 210px;
+  margin-right: 75px;
+  right: 2px;
+
 }
+
+.order button:hover {background-color: rgb(189, 0, 0);}
 
 .order font.Header {font-weight: bold; color: #474747;}
 
@@ -64,7 +98,7 @@
 .pizzas font.BtnText{margin-left: 0px; color: white;}
 
 
-.pizzas button.BtnAdd {
+.pizzas button {
   background-color: #770000;
   height: 25px;
   width: 25px;

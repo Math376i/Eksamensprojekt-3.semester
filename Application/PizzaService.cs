@@ -31,12 +31,17 @@ public class PizzaService : IPizzaService
         _pizzaRepository.RebuildDB();
     }
 
+    public List<Pizza> GetAllPizzas()
+    {
+        return _pizzaRepository.GetAllPizzas();
+    }
+    
     public List<Pizza> getPizzaFromOrder(string email)
     {
         var order = _orderService.GetOrderIdByEmail(email);
         return _pizzaRepository.GetPizzaFromOrder(order.OrderId);
     }
-
+    
     public Pizza CreateNewPizza(PizzaDTOs dto)
     {
         var validation = _postValidator.Validate(dto);
@@ -50,9 +55,12 @@ public class PizzaService : IPizzaService
         pizza.Fam40x40Price = dto.Fam40x40Price;
         pizza.Fam50x50Price = dto.Fam50x50Price;
         pizza.AlmGlutenfriPrice = dto.AlmGlutenfriPrice;
+        pizza.Topping = dto.Topping;
         pizza.OrderId = _orderService.GetOrderIdByEmail(dto.Email).OrderId;
-
+        
+        _pizzaRepository.CreateNewPizza(pizza);
         return pizza;
+        
     }
 
     public Pizza DeletePizza(int id)

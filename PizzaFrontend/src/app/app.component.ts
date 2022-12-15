@@ -8,24 +8,24 @@ import {HttpService} from "../services/http.service";
 })
 export class AppComponent implements OnInit{
 
+  MenuPizzas: any;
+  pizzasOrdered: any;
   PizzaName: string ="";
-  Pizzas: any;
-  PizzaFromOrder: any;
   AlmPrice : number = 0;
   Fam40x40Price : number = 0;
   Fam50x50Price : number= 0;
   AlmGlutenfriPrice: number = 0;
   Topping: string = "";
+  Email: string = "";
 
   constructor(private http: HttpService) {
 
   }
 
-  async ngOnInit() {
-    const Pizzas = await this.http.getAllPizzas();
-   // const PizzaOnOrder = await this.http.getPizzaFromOrder();
-    this.Pizzas = Pizzas;
-   // this.PizzaFromOrder = PizzaOnOrder;
+  ngOnInit(): void {
+
+    this.GetAllPizzas();
+    this.pizzaToOrder
 
   }
 
@@ -39,30 +39,34 @@ export class AppComponent implements OnInit{
       Topping: this.Topping
     }
     const result = await this.http.createPizza(dto)
-    this.Pizzas.push(result)
+    this.MenuPizzas.push(result)
   }
 
   async deletePizzas(id: any) {
     const pizza = await this.http.deletePizza(id);
-    this.Pizzas = this.Pizzas.filter((b: { id: any; }) => b.id != pizza.id)
+    this.MenuPizzas = this.MenuPizzas.filter((b: { id: any; }) => b.id != pizza.id)
+  }
+
+  async GetAllPizzas(){
+    this.MenuPizzas = await this.http.GetAllPizzas()
   }
 
   async pizzaToOrder(){
-    let dto = {
-      PizzaName: this.PizzaName,
-      AlmPrice: this.AlmPrice,
-      Fam40x40Price: this.Fam40x40Price,
-      Fam50x50Price: this.Fam50x50Price,
-      AlmGlutenfriPrice: this.AlmGlutenfriPrice,
+     let dto = {
+     PizzaName: this.PizzaName,
+       AlmPrice: this.AlmPrice,
+     Fam40x40Price: this.Fam40x40Price,
+     Fam50x50Price: this.Fam50x50Price,
+     AlmGlutenfriPrice: this.AlmGlutenfriPrice,
       Topping: this.Topping
     }
-    const result = await this.http.pizzaToOrder(dto)
-    this.Pizzas.push(result)
-  }
+    const result = await this.http.GetPizzaFromOrder()
+    this.pizzasOrdered.push(result)
+   }
 
   async deletePizzaFromOrder(id: any) {
     const pizza = await this.http.deletePizzaFromOrder(id);
-    this.PizzaFromOrder = this.PizzaFromOrder.filter((p: {id:any;}) => p.id != pizza.id)
+    this.pizzasOrdered = this.pizzasOrdered.filter((p: {id:any;}) => p.id != pizza.id)
   }
 
 }

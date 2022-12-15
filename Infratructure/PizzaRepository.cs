@@ -21,6 +21,11 @@ public class PizzaRepository : IPizzaRepository
         _pizzaContext.Database.EnsureCreated();
     }
 
+    public List<Pizza> GetAllPizzas()
+    {
+        return _pizzaContext.PizzaTable.ToList();
+    }
+
     public List<Pizza> GetPizzaFromOrder(int orderId)
     {
         return _pizzaContext.PizzaTable.Where(x => x.OrderId == orderId).ToList();
@@ -46,9 +51,5 @@ public class PizzaRepository : IPizzaRepository
       _pizzaContext.SaveChanges();
       return pizza;
   }
-
-  public Order GetOrderIdByEmail(string email)
-  {
-      throw new NotImplementedException();
-  }
+  
 }

@@ -11,9 +11,12 @@ import {HttpService} from "../../services/http.service";
 export class PizzasComponent implements OnInit {
 
   MenuPizzas: any;
-  pizzasOrdered: any;
+  CustomerInfo: any;
+  pizzasOrdered: any []= [];
+
   PizzaName: string ="";
   AlmPrice : number = 0;
+  price: number = 0;
   Fam40x40Price : number = 0;
   Fam50x50Price : number= 0;
   AlmGlutenfriPrice: number = 0;
@@ -23,30 +26,39 @@ export class PizzasComponent implements OnInit {
   constructor(private pizzaService: PizzaService, private httpService: HttpService) { }
 
   ngOnInit(): void {
-    this.getPizzas();
 
+    this.GetAllPizzas();
   }
 
-  async getPizzas() {
-   this.MenuPizzas = await this.httpService.getAllPizzas()
+  async GetAllPizzas(){
+   this.MenuPizzas = await this.httpService.GetAllPizzas()
   }
 
-  async add(price: number) {
 
-     // this.pizzasOrdered = await this.httpService.getPizzasFromOrder()
+  async GetPizzaFromOrder(){
+    this.pizzasOrdered = await this.httpService.GetPizzaFromOrder()
+  }
+
+  async add(id: number, name: string, price: number ) {
 
       let dto = {
-        PizzaName: this.PizzaName,
-        AlmPrice: this.AlmPrice,
-        Fam40x40Price: this.Fam40x40Price,
-        Fam50x50Price: this.Fam50x50Price,
-        AlmGlutenfriPrice: this.AlmGlutenfriPrice,
-        Topping: this.Topping
+        id,
+        name,
+        price
       }
-      this.pizzasOrdered.push()
+
+      this.pizzasOrdered.push(dto)
   }
 
-  async buy(price: number) {
+  async buy (CustomerName: string, PhoneNumber: number, Email: string) {
 
+    let customer = {
+    CustomerName,
+    PhoneNumber,
+    Email
+    }
+    await this.httpService.CreateNewOrder()
+     // @ts-ignore
+    this.pizzasOrdered.map(this.Email = customer.Email);
   }
 }

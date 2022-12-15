@@ -12,8 +12,13 @@ export class HttpService {
   constructor() {
   }
 
-  async getAllPizzas(){
-    const httpResult = await customAxios.get<any>('Pizza/GetAllPizzas')
+  async GetAllPizzas(){
+    const httpResult = await customAxios.get('Pizza/GetAllPizzas')
+    return httpResult.data;
+  }
+
+  async GetPizzaFromOrder(){
+    const httpResult = await customAxios.get<any>('Pizza/GetPizzaFromOrder')
     return httpResult.data;
   }
 
@@ -27,14 +32,13 @@ export class HttpService {
     return httpResult.data;
   }
 
-  async pizzaToOrder(dto: {PizzaName: string, AlmPrice: number, Fam40x40Price: number, Fam50x50Price: number, AlmGlutenfriPrice: number, Topping: string}) {
-    const httpResult = await customAxios.post('Pizza/AddPizzaToOrder'+dto);
+  async GetAllOrders(){
+    const httpResult = await customAxios.get('Pizza/GetAllOrders')
     return httpResult.data;
   }
 
-  async getPizzasFromOrder() {
-    const httpResult = await customAxios.get('Pizza/GetPizzaFromOrder')
-    return httpResult.data;
+  async CreateNewOrder(){
+    const httpResult = await customAxios.post('Pizza/CreateNewOrder')
   }
 
   async deletePizzaFromOrder(id: any) {
