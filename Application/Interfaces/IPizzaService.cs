@@ -7,6 +7,7 @@ namespace Application.Interfaces;
 
 public interface IPizzaService
 {
+    //This interface helps to get all the methods into the classes there are using it
     public void RebuildDB();
 
     public List<Pizza> GetAllPizzas();
@@ -15,5 +16,5 @@ public interface IPizzaService
     public Pizza DeletePizza(int Id);
     
     public Pizza UpdatePizza(int pizzaId, PizzaUpdateDTOs dto);
-    List<Pizza> getPizzaFromOrder(object orderId);
+   // List<Pizza> getPizzaFromOrder(object orderId);
 }

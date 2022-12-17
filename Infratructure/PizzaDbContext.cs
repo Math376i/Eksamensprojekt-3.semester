@@ -12,6 +12,7 @@ public class PizzaDbContext : DbContext
     {
         
     }
+    // This Class helps to make the database and all the keys in the database
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {   

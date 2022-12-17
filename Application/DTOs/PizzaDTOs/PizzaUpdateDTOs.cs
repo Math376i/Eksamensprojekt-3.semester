@@ -4,6 +4,7 @@ namespace Application.DTOs;
 
 public class PizzaUpdateDTOs
 {
+    // This Class helps to get and set the values  to a pizza so it could update
     public int Id { get; set; }
     
     public string Name { get; set; }

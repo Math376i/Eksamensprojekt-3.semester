@@ -2,6 +2,7 @@
 
 public class BuyPizza
 {
+    //This Class helps to get all the values of a pizza when a customer buy's it
     public int Id { get; set; }
     
     public string CustomerName { get; set; }

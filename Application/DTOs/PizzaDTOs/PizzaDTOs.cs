@@ -4,7 +4,7 @@ namespace Application.DTOs;
 
 public class PizzaDTOs
 {
-
+// This class helps to set the values of the things a pizza should have
     public string Name { get; set; }
 
     public int AlmPrice { get; set; }

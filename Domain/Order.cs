@@ -5,6 +5,7 @@ namespace Domain;
 
 public class Order
 {
+    //This Class helps to get all the values of a order
     public int OrderId { get; set; }
     public string CustomerName { get; set; }
 

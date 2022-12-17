@@ -32,17 +32,17 @@ public class PizzaService : IPizzaService
     }
 
   
-
+// This method helps to rebuild the database
     public void RebuildDB()
     {
         _pizzaRepository.RebuildDB();
     }
-
+// This method helps to get a list of all the pizzas
     public List<Pizza> GetAllPizzas()
     {
         return _pizzaRepository.GetAllPizzas();
     }
-
+// This method helps to create a new pizza
     public Pizza CreateNewPizza(PizzaDTOs dto)
     {
         var validation = _postValidator.Validate(dto);
@@ -52,12 +52,13 @@ public class PizzaService : IPizzaService
 
     }
 
+    // This method helps to delete a pizza
     public Pizza DeletePizza(int orderId)
     {
 
         return _pizzaRepository.DeletePizza(orderId);
     }
-
+// This method helps to update a pizza
     public Pizza UpdatePizza(int pizzaId, PizzaUpdateDTOs dto)
     {
         if (pizzaId != dto.Id)
@@ -69,8 +70,8 @@ public class PizzaService : IPizzaService
 
     }
 
-    public List<Pizza> getPizzaFromOrder(object orderId)
+   /* public List<Pizza> getPizzaFromOrder(object orderId)
     {
         throw new NotImplementedException();
-    }
+    }*/
 }

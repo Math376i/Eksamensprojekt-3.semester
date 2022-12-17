@@ -17,32 +17,30 @@ public class PizzaOrderRepository : IPizzaOrderRepository
         return _pizzaContext.JoinedTable.ToList();
     }
 */
+   // This method helps to get a pizzaOrder in the program
    public List<PizzaOrder> GetPizzaOrders()
    {
        throw new NotImplementedException();
    }
-
+// This method helps to create a new PizzaOrder in the program
    public BuyPizza CreatePizzaOrder(BuyPizza buyPizza)
     {
         _pizzaContext.JoinedTable.Add(buyPizza);
         _pizzaContext.SaveChanges();
         return CreatePizzaOrder(buyPizza);
     }
-
+// This method helps to delete a PizzaOrder in the program
    public PizzaOrder DeletePizzaOrder(int orderId)
    {
        throw new NotImplementedException();
    }
 
+   // This method helps to get all the pizzas from a order
    public List<PizzaOrder> GetPizzaFromOrder()
    {
        throw new NotImplementedException();
    }
 
-   public void DeletePizza(int i)
-   {
-       throw new NotImplementedException();
-   }
 
    /* public PizzaOrder DeletePizzaOrder(int orderId)
     {

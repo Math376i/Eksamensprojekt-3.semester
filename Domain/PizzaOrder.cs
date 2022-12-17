@@ -2,6 +2,7 @@
 
 public class PizzaOrder
 {
+    //This Class helps to get all the values of a pizza on a order
     public int PizzaId { get; set; }
 
     public int OrderId { get; set; }

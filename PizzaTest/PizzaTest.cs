@@ -19,7 +19,6 @@ public class PizzaTest
 
     public PizzaTest()
     {
-        
     }
     /*
     [Fact]
@@ -51,7 +50,7 @@ public class PizzaTest
 
 */    
 
-
+// Test to see the addpizzatoOrder method
     [Fact]
     public void AddPizzaToOrder()
     {
@@ -66,7 +65,7 @@ public class PizzaTest
         Assert.NotNull(service);
         Assert.True(service is PizzaOrderService);
     }
-
+// Test to see the GetPizzaFromOrder method
     [Fact]
     public void GetPizzaFromOrder()
     {
@@ -95,7 +94,7 @@ public class PizzaTest
   
         mockRepository.Verify(r => r.GetPizzaFromOrder(), Times.Once);
     }
-
+//Test to see if the deletePizzaOrdrer is running as it should 
     [Fact]
     public void DeletePizzaOrdrer()
     {

@@ -23,12 +23,12 @@ public class OrderService : IOrderService
 
     }
     
-    
+    // This method helps to get all the orders
     public List<Order> GetAllOrders()
     {
         return _orderRepository.GetAllOrders();
     }
-
+// This method helps to create a new order
     public Order CreateNewOrder(OrderDTOs dto)
     {
         var validation = _postValidator.Validate(dto);
@@ -36,7 +36,7 @@ public class OrderService : IOrderService
             throw new ValidationException(validation.ToString());
         return _orderRepository.CreateNewOrder(_mapper.Map<Order>(dto));
     }
-
+// This method helps to delete a order
     public Order DeleteOrder(int orderId)
     {
         return _orderRepository.DeleteOrder(orderId);
