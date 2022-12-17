@@ -11,6 +11,5 @@ public interface IOrderService
     Order CreateNewOrder(OrderDTOs dto);
 
     Order DeleteOrder(int orderId);
-
-    public Order GetOrderIdByEmail(string email);
+    
 }

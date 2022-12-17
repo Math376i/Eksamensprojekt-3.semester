@@ -14,6 +14,10 @@ export class PizzasComponent implements OnInit {
   CustomerInfo: any;
   pizzasOrdered: any []= [];
 
+  CustomerName: any;
+  PhoneNumber: any;
+  Email: any;
+
   PizzaName: string ="";
   AlmPrice : number = 0;
   price: number = 0;
@@ -21,7 +25,7 @@ export class PizzasComponent implements OnInit {
   Fam50x50Price : number= 0;
   AlmGlutenfriPrice: number = 0;
   Topping: string = "";
-  Email: string = "";
+
 
   constructor(private pizzaService: PizzaService, private httpService: HttpService) { }
 
@@ -50,15 +54,15 @@ export class PizzasComponent implements OnInit {
       this.pizzasOrdered.push(dto)
   }
 
-  async buy (CustomerName: string, PhoneNumber: number, Email: string) {
+  async buy () {
 
-    let customer = {
-    CustomerName,
-    PhoneNumber,
-    Email
+    let dto = {
+      CustomerName: this.CustomerName,
+      PhoneNumber: this.PhoneNumber,
+      Email: this.Email,
+      BuyPizzas: this.pizzasOrdered
     }
-    await this.httpService.CreateNewOrder()
-     // @ts-ignore
-    this.pizzasOrdered.map(this.Email = customer.Email);
+    await this.httpService.sendOrder(dto)
+
   }
 }

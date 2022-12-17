@@ -8,7 +8,6 @@ namespace Application.Interfaces;
 public interface IPizzaService
 {
     public void RebuildDB();
-    List<Pizza> getPizzaFromOrder(string email);
 
     public List<Pizza> GetAllPizzas();
 

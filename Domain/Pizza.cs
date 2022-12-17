@@ -16,7 +16,11 @@ public class Pizza
     public int AlmGlutenfriPrice { get; set; }
 
     public string Topping { get; set; }
+
+    public List<Order> PizzasOnOrders { get; set; }
     
-    public int OrderId { get; set; }
+    public PizzaOrder? PizzaOrder { get; set; }
+    
+    //public List<PizzaOrder> PizzaOrders { get; set; }*/
 
 }

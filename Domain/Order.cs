@@ -11,5 +11,14 @@ public class Order
     public int PhoneNumber { get; set; }
     
     public string Email { get; set; }
+    
+    public int PizzaId { get; set; }
+
+    public Pizza pizza { get; set; }
+    public List<Pizza> PizzasOrderList { get; set; }
+    
+    //public List<PizzaOrder> PizzaOrders { get; set; }
+    
+    public PizzaOrder? PizzaOrder { get; set; }
 
 }  

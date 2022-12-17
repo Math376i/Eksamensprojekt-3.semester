@@ -1,5 +1,6 @@
 ﻿using Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Migrations.Internal;
 
 namespace Infrastructure;
@@ -22,14 +23,35 @@ public class PizzaDbContext : DbContext
             .Property(o => o.OrderId)
             .ValueGeneratedOnAdd();
 
-        modelBuilder.Entity<Pizza>()
-              .HasOne<Order>()
-              .WithMany()
-              .HasForeignKey(o => o.OrderId)
-              .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<BuyPizza>()
+            .Property(b => b.Id)
+            .ValueGeneratedOnAdd();
+        
+        modelBuilder.Entity<PizzaOrder>()
+            .HasKey(a => new { a.PizzaId, a.OrderId });
 
+        modelBuilder.Entity<Order>()
+            .HasOne(p =>p.pizza)
+            .WithMany(p => p.PizzasOnOrders);
+        
+
+        modelBuilder.Entity<PizzaOrder>()
+            .HasMany<Pizza>(p => p.Pizzas)
+            .WithOne(l => l.PizzaOrder);
+
+        modelBuilder.Entity<PizzaOrder>()
+            .HasMany<Order>(p => p.Orders)
+            .WithOne(l => l.PizzaOrder);
+                
+        modelBuilder.Entity<PizzaOrder>()
+            .Ignore(p => p.pizza);
+        modelBuilder.Entity<PizzaOrder>()
+            .Ignore(p => p.order);
+        
     }
-    
+
+    public DbSet<BuyPizza> JoinedTable { get; set; }
+
     public DbSet<Pizza> PizzaTable { get; set; }
 
     public DbSet<Order> OrderTable { get; set; }

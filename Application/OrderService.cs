@@ -42,8 +42,5 @@ public class OrderService : IOrderService
         return _orderRepository.DeleteOrder(orderId);
     }
 
-    public Order GetOrderIdByEmail(string email)
-    {
-        return _orderRepository.GetOrderIdByEmail(email);
-    }
+    
 }

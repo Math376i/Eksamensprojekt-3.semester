@@ -1,5 +1,10 @@
-
-
+body.WebBody{
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  position: absolute;
+  background-color: #CB5E4B;
+}
 
 .order label.OrderBox {
   flex: 1;
@@ -59,7 +64,7 @@
   height: 30px;
   width: 120px;
   margin-top: 210px;
-  margin-right: 75px;
+  margin-right: 58px;
   right: 2px;
 
 }

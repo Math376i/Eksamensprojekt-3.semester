@@ -26,11 +26,6 @@ public class PizzaRepository : IPizzaRepository
         return _pizzaContext.PizzaTable.ToList();
     }
 
-    public List<Pizza> GetPizzaFromOrder(int orderId)
-    {
-        return _pizzaContext.PizzaTable.Where(x => x.OrderId == orderId).ToList();
-    }
-
     public Pizza CreateNewPizza(Pizza pizza)
     {
         _pizzaContext.PizzaTable.Add(pizza);

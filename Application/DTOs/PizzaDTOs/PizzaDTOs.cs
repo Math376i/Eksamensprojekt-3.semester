@@ -16,6 +16,4 @@ public class PizzaDTOs
     public int AlmGlutenfriPrice { get; set; }
     
     public string Topping { get; set; }
-    
-    public string Email { get; set; }
 }

@@ -35,38 +35,20 @@ public class PizzaService : IPizzaService
     {
         return _pizzaRepository.GetAllPizzas();
     }
-    
-    public List<Pizza> getPizzaFromOrder(string email)
-    {
-        var order = _orderService.GetOrderIdByEmail(email);
-        return _pizzaRepository.GetPizzaFromOrder(order.OrderId);
-    }
-    
+
     public Pizza CreateNewPizza(PizzaDTOs dto)
     {
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        
-        Pizza pizza = new Pizza();
+        return _pizzaRepository.CreateNewPizza(_mapper.Map<Pizza>(dto));
 
-        pizza.Name = dto.Name;
-        pizza.AlmPrice = dto.AlmPrice;
-        pizza.Fam40x40Price = dto.Fam40x40Price;
-        pizza.Fam50x50Price = dto.Fam50x50Price;
-        pizza.AlmGlutenfriPrice = dto.AlmGlutenfriPrice;
-        pizza.Topping = dto.Topping;
-        pizza.OrderId = _orderService.GetOrderIdByEmail(dto.Email).OrderId;
-        
-        _pizzaRepository.CreateNewPizza(pizza);
-        return pizza;
-        
     }
 
-    public Pizza DeletePizza(int id)
+    public Pizza DeletePizza(int orderId)
     {
 
-        return _pizzaRepository.DeletePizza(id);
+        return _pizzaRepository.DeletePizza(orderId);
     }
 
     public Pizza UpdatePizza(int pizzaId, PizzaUpdateDTOs dto)
