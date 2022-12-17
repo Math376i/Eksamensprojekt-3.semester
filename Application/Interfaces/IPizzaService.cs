@@ -15,4 +15,5 @@ public interface IPizzaService
     public Pizza DeletePizza(int Id);
     
     public Pizza UpdatePizza(int pizzaId, PizzaUpdateDTOs dto);
+    List<Pizza> getPizzaFromOrder(object orderId);
 }

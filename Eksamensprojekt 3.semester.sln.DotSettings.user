@@ -4,5 +4,6 @@
     &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.AddPizzaToOrder&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.DeletePizzaFromOrder&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.GetPizzaFromOrder&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.DeletePizza&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

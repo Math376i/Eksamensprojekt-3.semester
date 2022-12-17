@@ -1,4 +1,6 @@
-﻿namespace Domain;
+﻿using System.Net.Mail;
+
+namespace Domain;
 
 public class Pizza
 {
@@ -22,5 +24,6 @@ public class Pizza
     public PizzaOrder? PizzaOrder { get; set; }
     
     //public List<PizzaOrder> PizzaOrders { get; set; }*/
-
+    
+    
 }

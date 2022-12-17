@@ -12,5 +12,6 @@ public class PizzaOrder
 
     public Order order { get; set; }
     
-    public Pizza pizza { get; set; }
+    public List<Pizza> pizza { get; set; }
+    public string PizzaName { get; set; }
 }

@@ -26,6 +26,11 @@ public class PizzaService : IPizzaService
         _orderService = orderService;
     }
 
+    public PizzaService(IPizzaRepository mockRepositoryObject, IMapper mapper, PostPizzaValidator postValidator, PizzaValidator pizzaValidator)
+    {
+        throw new NotImplementedException();
+    }
+
     public void RebuildDB()
     {
         _pizzaRepository.RebuildDB();
@@ -60,5 +65,10 @@ public class PizzaService : IPizzaService
             throw new ValidationException(validation.ToString());
         return _pizzaRepository.UpdatePizza(_mapper.Map<Pizza>(dto));
 
+    }
+
+    public List<Pizza> getPizzaFromOrder(object orderId)
+    {
+        throw new NotImplementedException();
     }
 }

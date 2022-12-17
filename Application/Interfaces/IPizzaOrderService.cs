@@ -9,4 +9,7 @@ public interface IPizzaOrderService
     public BuyPizza CreatePizzaOrder(BuyPizza buyPizza);
     
     public PizzaOrder DeletePizzaOrder(int orderId);
+
+    List<PizzaOrder> GetPizzaFromOrder();
+    void DeletePizza(int i);
 }

@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using AutoMapper;
 using Domain;
 
 namespace Application;
@@ -7,7 +8,7 @@ public class PizzaOrderService  : IPizzaOrderService
 {
     private IPizzaOrderRepository _pizzaOrderRepository;
 
-    public PizzaOrderService(IPizzaOrderRepository repository)
+    public PizzaOrderService(IMapper mapper, IPizzaOrderRepository repository)
     {
         _pizzaOrderRepository = repository;
     }
@@ -25,5 +26,20 @@ public class PizzaOrderService  : IPizzaOrderService
     public PizzaOrder DeletePizzaOrder(int id)
     {
         return _pizzaOrderRepository.DeletePizzaOrder(id);
+    }
+
+    public void DeletePizzaFromOrder(int i)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<PizzaOrder> GetPizzaFromOrder()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void DeletePizza(int i)
+    {
+        throw new NotImplementedException();
     }
 }
