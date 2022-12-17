@@ -34,6 +34,16 @@ public class PizzaOrderRepository : IPizzaOrderRepository
        throw new NotImplementedException();
    }
 
+   public List<PizzaOrder> GetPizzaFromOrder()
+   {
+       throw new NotImplementedException();
+   }
+
+   public void DeletePizza(int i)
+   {
+       throw new NotImplementedException();
+   }
+
    /* public PizzaOrder DeletePizzaOrder(int orderId)
     {
         var pizzaOrderToDelete = _pizzaContext.JoinedTable.Find(orderId) ?? throw new KeyNotFoundException();
