@@ -4,6 +4,7 @@ namespace Domain;
 
 public class Pizza
 {
+    
 
     public int Id { get; set; }
     

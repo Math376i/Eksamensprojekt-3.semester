@@ -11,5 +11,5 @@ public interface IPizzaOrderService
     public PizzaOrder DeletePizzaOrder(int orderId);
 
     List<PizzaOrder> GetPizzaFromOrder();
-    void DeletePizza(int i);
+    
 }

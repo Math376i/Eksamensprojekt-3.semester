@@ -38,8 +38,5 @@ public class PizzaOrderService  : IPizzaOrderService
         throw new NotImplementedException();
     }
 
-    public void DeletePizza(int i)
-    {
-        throw new NotImplementedException();
-    }
+ 
 }

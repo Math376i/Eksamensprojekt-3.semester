@@ -15,6 +15,7 @@ public class PizzaTest
     private IMapper _mapper;
     private PostPizzaValidator _postValidator;
     private PizzaValidator _pizzaValidator;
+    private Mock<IPizzaRepository> pizzaRepoMock = new Mock<IPizzaRepository>();
 
     public PizzaTest()
     {
@@ -72,11 +73,11 @@ public class PizzaTest
         //Arrange
         var Order1 = new PizzaOrder()
             { order = new Order(), pizza = new List<Pizza>(), OrderId = 1, PizzaId = 1, PizzaName = "?" };
-        var Order2 = new PizzaOrder() 
-            { order = new Order(), pizza = new List<Pizza>(), OrderId = 2, PizzaId = 1, PizzaName = "?" };
-        var Order3 = new PizzaOrder() 
-            { order = new Order(), pizza = new List<Pizza>(), OrderId = 3, PizzaId = 1, PizzaName = "?" };
-        List<PizzaOrder> fakeRepo = new List<PizzaOrder>() { Order1, Order2, Order3 };
+       // var Order2 = new PizzaOrder() 
+            //{ order = new Order(), pizza = new List<Pizza>(), OrderId = 2, PizzaId = 1, PizzaName = "?" };
+       // var Order3 = new PizzaOrder() 
+            //{ order = new Order(), pizza = new List<Pizza>(), OrderId = 3, PizzaId = 1, PizzaName = "?" };
+        List<PizzaOrder> fakeRepo = new List<PizzaOrder>() { Order1 };
 
         Mock<IPizzaOrderRepository> mockRepository = new Mock<IPizzaOrderRepository>();
         mockRepository.Setup(r => r.GetPizzaFromOrder()).Returns(fakeRepo);
@@ -87,32 +88,32 @@ public class PizzaTest
         List<PizzaOrder> result = service.GetPizzaFromOrder();
         
         //Assert
-        Assert.True(result.Count == 3);
+        Assert.True(result.Count == 1);
         Assert.Contains(Order1,result);
-        Assert.Contains(Order2,result);
-        Assert.Contains(Order3,result);
+        //Assert.Contains(Order2,result);
+       // Assert.Contains(Order3,result);
   
         mockRepository.Verify(r => r.GetPizzaFromOrder(), Times.Once);
     }
 
     [Fact]
-    public void DeletePizza()
+    public void DeletePizzaOrdrer()
     {
         //Arrange
         Mock<IPizzaOrderRepository> mockRepository = new Mock<IPizzaOrderRepository>();
         IPizzaOrderService service = new PizzaOrderService(_mapper, mockRepository.Object);
         var Pizza1 = new Pizza() { Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 30, AlmGlutenfriPrice = 40, Topping = "String" };
-        var Pizza2 = new Pizza() { Name = "Magharita", AlmPrice = 45, Fam40x40Price = 40, Fam50x50Price = 50, AlmGlutenfriPrice = 60, Topping = "Ost, TomatSauce" };
-        var Pizza3 = new Pizza() { Name = "Kebab", AlmPrice = 45, Fam40x40Price = 40, Fam50x50Price = 50, AlmGlutenfriPrice = 60,Topping = "Ost, TomatSauce, Salat, Kebab, Dressing" };
-        List<Pizza> fakeRepo = new List<Pizza>() { Pizza1, Pizza2, Pizza3 };
+        //var Pizza2 = new Pizza() { Name = "Magharita", AlmPrice = 45, Fam40x40Price = 40, Fam50x50Price = 50, AlmGlutenfriPrice = 60, Topping = "Ost, TomatSauce" };
+       // var Pizza3 = new Pizza() { Name = "Kebab", AlmPrice = 45, Fam40x40Price = 40, Fam50x50Price = 50, AlmGlutenfriPrice = 60,Topping = "Ost, TomatSauce, Salat, Kebab, Dressing" };
+        List<Pizza> fakeRepo = new List<Pizza>() { Pizza1 };
         
         //Act
 
-        service.DeletePizza(2);
+        service.DeletePizzaOrder(1);
 
         //Assert
         
-        mockRepository.Verify(r => r.DeletePizza(2), Times.Once);
+        mockRepository.Verify(r => r.DeletePizzaOrder(1), Times.Once);
     }
-
-    }
+    
+}
