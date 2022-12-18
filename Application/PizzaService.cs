@@ -28,11 +28,12 @@ public class PizzaService : IPizzaService
 
     public PizzaService(IPizzaRepository mockRepositoryObject, IMapper mapper, PostPizzaValidator postValidator, PizzaValidator pizzaValidator)
     {
-        throw new NotImplementedException();
+        _pizzaRepository = mockRepositoryObject ?? throw new ArgumentNullException();
     }
 
-  
-// This method helps to rebuild the database
+   
+
+    // This method helps to rebuild the database
     public void RebuildDB()
     {
         _pizzaRepository.RebuildDB();
