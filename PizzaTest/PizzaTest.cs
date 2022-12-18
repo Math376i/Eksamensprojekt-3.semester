@@ -40,12 +40,11 @@ public class PizzaTest
         
         // Act
         var result = service.GetAllPizzas();
+        
         // Assert
         Assert.True(result.Count == 1);
         Assert.Contains(Pizza1,result);
-        //Assert.Contains(Pizza2,result);
-        //Assert.Contains(Pizza3,result);
-  
+
         mockRepository.Verify(r => r.GetAllPizzas(), Times.Once);
     }
 
@@ -110,8 +109,8 @@ public class PizzaTest
         
         mockRepository.Verify(r => r.DeletePizzaOrder(1), Times.Once);
     }
-    
-    
+
+   
     
     
 }
