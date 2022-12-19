@@ -48,59 +48,15 @@ public class PizzaTest
 
         mockRepository.Verify(r => r.GetAllPizzas(), Times.Once);
     }
-
-
-
-// Test to see the addpizzatoOrder method
-    [Fact]
-    public void AddPizzaToOrder()
-    {
-        //Arrange
-        Mock<IPizzaOrderRepository> mockRepository = new Mock<IPizzaOrderRepository>();
-        IPizzaOrderRepository repository = mockRepository.Object;
-
-        //Act
-        IPizzaOrderService service = new PizzaOrderService(_mapper, repository);
-
-        //Assert
-        Assert.NotNull(service);
-        Assert.True(service is PizzaOrderService);
-    }
-
-// Test to see the GetPizzaFromOrder method
-    [Fact]
-    public void GetPizzaOrders()
-    {
-        //Arrange
-        var order1 = new PizzaOrder()
-            { order = new Order(), pizza = new List<Pizza>(), OrderId = 1, PizzaId = 1, PizzaName = "?", };
-
-        List<PizzaOrder> fakeRepo = new List<PizzaOrder>() { order1 };
-
-        Mock<IPizzaOrderRepository> mockRepository = new Mock<IPizzaOrderRepository>();
-        mockRepository.Setup(r => r.GetPizzaOrders()).Returns(fakeRepo);
-
-        IPizzaOrderService service = new PizzaOrderService(_mapper, mockRepository.Object);
-
-        //Act
-        List<PizzaOrder> result = service.GetPizzaOrders();
-
-        //Assert
-        Assert.True(result.Count == 1);
-        Assert.Contains(order1, result);
-
-
-        mockRepository.Verify(r => r.GetPizzaOrders(), Times.Once);
-    }
-
+    
 
 //Test to see if the deletePizzaOrdrer is running as it should 
     [Fact]
-    public void DeletePizzaOrdrer()
+    public void DeletePizza()
     {
         //Arrange
-        Mock<IPizzaOrderRepository> mockRepository = new Mock<IPizzaOrderRepository>();
-        IPizzaOrderService service = new PizzaOrderService(_mapper, mockRepository.Object);
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        IPizzaService service = new PizzaService(_mapper, mockRepository.Object);
         var Pizza1 = new Pizza()
         {
             Id = 1, Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 30, AlmGlutenfriPrice = 40,
@@ -110,10 +66,10 @@ public class PizzaTest
 
         //Act
 
-        PizzaOrder result = service.DeletePizzaOrder(1);
+        Pizza result = service.DeletePizza(1);
 
         //Assert
-        mockRepository.Verify(r => r.DeletePizzaOrder(1), Times.Once);
+        mockRepository.Verify(r => r.DeletePizza(1), Times.Once);
     }
     
     
@@ -126,7 +82,7 @@ public class PizzaTest
         PizzaService? service = null;
 
         //Act
-        service = new PizzaService(repoMock.Object);
+        service = new PizzaService(repoMock.Object, _mapper, _postValidator, _pizzaValidator);
 
         //Assert
         Assert.NotNull(service);
@@ -134,16 +90,7 @@ public class PizzaTest
 
     }
 
-    [Fact]
-    public void CreatePizza_NullRepository()
-    {
-        //Arrange
-        PizzaService? service;
 
-        //Act+Assert
-        var ex = Assert.Throws<ArgumentException>(() => service = new PizzaService(null));
-        Assert.Equal("Missing PizzaRepository", ex.Message);
-    }
 
     [Fact]
     public void GetPizzaAlmPriceNotNull()

@@ -24,7 +24,7 @@ public class Pizza
 
     public List<Order> PizzasOnOrders { get; set; }
     
-    public PizzaOrder? PizzaOrder { get; set; }
+    
     
    
     

@@ -32,11 +32,13 @@ public class PizzaService : IPizzaService
         
     }
 
-    public PizzaService(IPizzaRepository mockRepositoryObject)
+    public PizzaService(IMapper repositoryObject, IPizzaRepository mockRepositoryObject)
     {
         _pizzaRepository = mockRepositoryObject ?? throw new ArgumentNullException();
 
     }
+
+ 
 
 
     // This method helps to rebuild the database

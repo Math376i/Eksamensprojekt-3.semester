@@ -23,30 +23,17 @@ public class PizzaDbContext : DbContext
             .Property(o => o.OrderId)
             .ValueGeneratedOnAdd();
 
-        modelBuilder.Entity<PizzaOrder>()
-            .HasKey(a => new { a.PizzaId, a.OrderId });
-
+        
+        
         modelBuilder.Entity<Order>()
             .HasOne(p =>p.pizza)
             .WithMany(p => p.PizzasOnOrders);
         
-
-        modelBuilder.Entity<PizzaOrder>()
-            .HasMany<Pizza>(p => p.Pizzas)
-            .WithOne(l => l.PizzaOrder);
-
-        modelBuilder.Entity<PizzaOrder>()
-            .HasMany<Order>(p => p.Orders)
-            .WithOne(l => l.PizzaOrder);
-                
-        modelBuilder.Entity<PizzaOrder>()
-            .Ignore(p => p.pizza);
-        modelBuilder.Entity<PizzaOrder>()
-            .Ignore(p => p.order);
+        
         
     }
 
-    public DbSet<PizzaOrder> JoinedTable { get; set; }
+    
 
     public DbSet<Pizza> PizzaTable { get; set; }
 

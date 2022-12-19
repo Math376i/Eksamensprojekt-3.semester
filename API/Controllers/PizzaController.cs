@@ -13,13 +13,12 @@ public class PizzaController : ControllerBase
 {
     private IPizzaService _pizzaService;
     private IOrderService _orderService;
-    private IPizzaOrderService _pizzaOrderService;
-
-    public PizzaController(IPizzaService service, IOrderService orderService, IPizzaOrderService pizzaOrderService)
+   
+    public PizzaController(IPizzaService service, IOrderService orderService)
     {
         _pizzaService = service;
         _orderService = orderService;
-        _pizzaOrderService = pizzaOrderService;
+        
     }
     // This method helps rebuilding the database
     [HttpGet]
@@ -128,44 +127,6 @@ public class PizzaController : ControllerBase
             return NotFound("No order found at id " + orderId);
         }
     }
-// This method helps to get an pizza ordre
-    [HttpGet]
-    [Route("GetPizzaOrder")]
-    public List<PizzaOrder> GetPizzaOrders()
-    {
-        return _pizzaOrderService.GetPizzaOrders();
-    }
-// This method helps to create a pizza order
-    [HttpPost]
-    [Route("CreatePizzaOrder")]
-    public ActionResult CreateNewPizzaOrder(PizzaOrder pizzaOrder)
-    {
-        try
-        {
-            return Ok(_pizzaOrderService.CreatePizzaOrder(pizzaOrder));
-        }
-        catch (ValidationException e)
-        {
-            return BadRequest(e.Message);
-        }
-        catch (Exception e)
-        {
-            return StatusCode(500, e.Message);
-        }
-    }
-// This method helps to delete a pizza order
-    [HttpDelete]
-    [Route("DeletePizzaOrder")]
-    public ActionResult<PizzaOrder> DeletePizzaOrder(int orderId)
-    {
-        try
-        {
-            return Ok(_pizzaOrderService.DeletePizzaOrder(orderId));
-        }
-        catch (KeyNotFoundException)
-        {
-            return NotFound("No pizzaOrder found at orderId" + orderId);
-        }
-    }
+
 
 }
