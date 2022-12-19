@@ -32,19 +32,7 @@ public class OrderRepository : IOrderRepository
         return orderToDelete;
     }
 
-    public Order GetOrderIdByEmail(string email)
-    {
-        Order order = _pizzaContext.OrderTable.Where(o => o.Email == email).ToList().FirstOrDefault();
-        if (order != null)
-        {
-            return order;
-        }
-        else
-        {
-            throw new Exception("Could not find order");
-        }
-    }
-    
+  
     
 
 }

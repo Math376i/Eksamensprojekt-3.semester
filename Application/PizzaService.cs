@@ -29,9 +29,15 @@ public class PizzaService : IPizzaService
     public PizzaService(IPizzaRepository mockRepositoryObject, IMapper mapper, PostPizzaValidator postValidator, PizzaValidator pizzaValidator)
     {
         _pizzaRepository = mockRepositoryObject ?? throw new ArgumentNullException();
+        
     }
 
-   
+    public PizzaService(IPizzaRepository mockRepositoryObject)
+    {
+        _pizzaRepository = mockRepositoryObject ?? throw new ArgumentNullException();
+
+    }
+
 
     // This method helps to rebuild the database
     public void RebuildDB()
@@ -71,8 +77,5 @@ public class PizzaService : IPizzaService
 
     }
 
-   /* public List<Pizza> getPizzaFromOrder(object orderId)
-    {
-        throw new NotImplementedException();
-    }*/
+  
 }

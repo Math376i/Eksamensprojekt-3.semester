@@ -1,6 +1,5 @@
-﻿using Application.DTOs;
+﻿
 using Domain;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Interfaces;
 
@@ -15,5 +14,6 @@ public interface IPizzaRepository
     
     public Pizza DeletePizza(int id);
     Pizza UpdatePizza(Pizza pizza);
-    
+
+
 }

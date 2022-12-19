@@ -1,7 +1,6 @@
 ﻿using Domain;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.EntityFrameworkCore.Migrations.Internal;
+
 
 namespace Infrastructure;
 
@@ -24,10 +23,6 @@ public class PizzaDbContext : DbContext
             .Property(o => o.OrderId)
             .ValueGeneratedOnAdd();
 
-        modelBuilder.Entity<BuyPizza>()
-            .Property(b => b.Id)
-            .ValueGeneratedOnAdd();
-        
         modelBuilder.Entity<PizzaOrder>()
             .HasKey(a => new { a.PizzaId, a.OrderId });
 
@@ -51,7 +46,7 @@ public class PizzaDbContext : DbContext
         
     }
 
-    public DbSet<BuyPizza> JoinedTable { get; set; }
+    public DbSet<PizzaOrder> JoinedTable { get; set; }
 
     public DbSet<Pizza> PizzaTable { get; set; }
 

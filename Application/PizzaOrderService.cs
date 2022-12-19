@@ -18,9 +18,9 @@ public class PizzaOrderService  : IPizzaOrderService
         return _pizzaOrderRepository.GetPizzaOrders();
     }
 // This method helps to create a pizza order
-    public BuyPizza CreatePizzaOrder(BuyPizza buyPizza)
+    public PizzaOrder CreatePizzaOrder(PizzaOrder pizzaOrder)
     {
-        return _pizzaOrderRepository.CreatePizzaOrder(buyPizza);
+        return _pizzaOrderRepository.CreatePizzaOrder(pizzaOrder);
     }
 
     // This method helps to delete a pizza from a order
@@ -30,10 +30,7 @@ public class PizzaOrderService  : IPizzaOrderService
     }
     
 
-    public List<PizzaOrder> GetPizzaFromOrder()
-    {
-        throw new NotImplementedException();
-    }
+  
 
  
 }

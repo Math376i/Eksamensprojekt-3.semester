@@ -4,6 +4,8 @@ namespace Domain;
 
 public class Pizza
 {
+   
+    
     //This Class helps to get all the values of a pizza 
 
     public int Id { get; set; }
@@ -24,7 +26,7 @@ public class Pizza
     
     public PizzaOrder? PizzaOrder { get; set; }
     
-    //public List<PizzaOrder> PizzaOrders { get; set; }*/
+   
     
     
 }

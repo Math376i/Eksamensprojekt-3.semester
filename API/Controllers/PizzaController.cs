@@ -1,4 +1,4 @@
-using Application;
+
 using Application.DTOs;
 using Application.Interfaces;
 using Domain;
@@ -138,11 +138,11 @@ public class PizzaController : ControllerBase
 // This method helps to create a pizza order
     [HttpPost]
     [Route("CreatePizzaOrder")]
-    public ActionResult CreateNewPizzaOrder(BuyPizza buyPizza)
+    public ActionResult CreateNewPizzaOrder(PizzaOrder pizzaOrder)
     {
         try
         {
-            return Ok(_pizzaOrderService.CreatePizzaOrder(buyPizza));
+            return Ok(_pizzaOrderService.CreatePizzaOrder(pizzaOrder));
         }
         catch (ValidationException e)
         {

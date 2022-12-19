@@ -12,41 +12,28 @@ public class PizzaOrderRepository : IPizzaOrderRepository
         _pizzaContext = context;
     }
 
-   /* public List<PizzaOrder> GetPizzaOrders()
-    {
-        return _pizzaContext.JoinedTable.ToList();
-    }
-*/
+ 
    // This method helps to get a pizzaOrder in the program
    public List<PizzaOrder> GetPizzaOrders()
    {
        throw new NotImplementedException();
    }
 // This method helps to create a new PizzaOrder in the program
-   public BuyPizza CreatePizzaOrder(BuyPizza buyPizza)
+   public PizzaOrder CreatePizzaOrder(PizzaOrder pizzaOrder)
     {
-        _pizzaContext.JoinedTable.Add(buyPizza);
+        _pizzaContext.JoinedTable.Add(pizzaOrder);
         _pizzaContext.SaveChanges();
-        return CreatePizzaOrder(buyPizza);
+        return CreatePizzaOrder(pizzaOrder);
     }
+
+   
+   
 // This method helps to delete a PizzaOrder in the program
    public PizzaOrder DeletePizzaOrder(int orderId)
-   {
-       throw new NotImplementedException();
-   }
-
-   // This method helps to get all the pizzas from a order
-   public List<PizzaOrder> GetPizzaFromOrder()
-   {
-       throw new NotImplementedException();
-   }
-
-
-   /* public PizzaOrder DeletePizzaOrder(int orderId)
     {
         var pizzaOrderToDelete = _pizzaContext.JoinedTable.Find(orderId) ?? throw new KeyNotFoundException();
         _pizzaContext.JoinedTable.Remove(pizzaOrderToDelete);
         _pizzaContext.SaveChanges();
         return pizzaOrderToDelete;
-    }*/
+    }
 }
