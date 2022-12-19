@@ -125,7 +125,7 @@ public class PizzaTest
         // Arrange
         var Pizza1 = new Pizza()
         {
-            Name = "String", AlmPrice = 0, Fam40x40Price = 0, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
+            Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 20, AlmGlutenfriPrice = 20,
             Topping = "String"
         };
 
@@ -164,7 +164,7 @@ public class PizzaTest
         var result = service.GetAllPizzas();
         
         // Assert
-        Assert.True(Pizza1.Name != String.Empty);
+        Assert.False(Pizza1.Name != String.Empty);
     }
 
     [Fact]
@@ -212,7 +212,7 @@ public class PizzaTest
         var result = service.GetAllPizzas();
         
         // Assert
-        Assert.True(Pizza1.Topping != String.Empty);
+        Assert.False(Pizza1.Topping != String.Empty);
     }
 
     [Fact]
@@ -263,7 +263,7 @@ public class PizzaTest
         var result = service.GetAllPizzas();
 
         // Assert
-        Assert.False(Pizza1.Fam40x40Price.Equals(0));
+        Assert.True(Pizza1.Fam40x40Price.Equals(0));
     }
 
     [Fact]
@@ -314,7 +314,7 @@ public class PizzaTest
         var result = service.GetAllPizzas();
 
         // Assert
-        Assert.False(Pizza1.Fam50x50Price.Equals(0));
+        Assert.True(Pizza1.Fam50x50Price.Equals(0));
     }
 
     [Fact]
@@ -365,7 +365,7 @@ public class PizzaTest
         var result = service.GetAllPizzas();
 
         // Assert
-        Assert.False(Pizza1.AlmGlutenfriPrice.Equals(0));
+        Assert.True(Pizza1.AlmGlutenfriPrice.Equals(0));
     }
 
     
