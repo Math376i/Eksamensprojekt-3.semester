@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7251c449_002Dae57_002D4e28_002D9113_002D4fe5f51d8490/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetAllPizzas" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.AddPizzaToOrder&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.DeletePizzaFromOrder&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.GetPizzaFromOrder&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.DeletePizza&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.DeletePizzaOrdrer&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.GetPizzaOrders&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.GetAllPizzas&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.GetPizzaPrice&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.GetPizzaPriceNull&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::9B2DC77F-0189-4EB9-9BDF-2262ACD83F36::net6.0::PizzaTest.PizzaTest.GetPizzaNameNull&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

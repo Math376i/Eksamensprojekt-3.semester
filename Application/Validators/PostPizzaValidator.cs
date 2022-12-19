@@ -1,6 +1,14 @@
-﻿namespace Application.Validators;
+﻿using Application.DTOs;
+using FluentValidation;
 
-public class PostPizzaValidator
+namespace Application.Validators;
+
+public class PostPizzaValidator : AbstractValidator<PizzaDTOs>
 {
-    
+    public PostPizzaValidator()
+    {
+        RuleFor(p => p.Name).NotEmpty();
+        RuleFor(p => p.Topping).NotEmpty();
+        
+    }
 }
