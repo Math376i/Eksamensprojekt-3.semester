@@ -146,7 +146,7 @@ public class PizzaTest
     }
 
     [Fact]
-    public void GetPizzaPriceNotNull()
+    public void GetPizzaAlmPriceNotNull()
     {
         // Arrange
 
@@ -173,12 +173,12 @@ public class PizzaTest
     }
 
     [Fact]
-    public void GetPizzaPriceNull()
+    public void GetPizzaAlmPriceNull()
     {
         // Arrange
         var Pizza1 = new Pizza()
         {
-            Name = "String", AlmPrice = 10, Fam40x40Price = 0, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
+            Name = "String", AlmPrice = 0, Fam40x40Price = 0, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
             Topping = "String"
         };
 
@@ -219,7 +219,207 @@ public class PizzaTest
         // Assert
         Assert.True(Pizza1.Name != String.Empty);
     }
-    
-    
+
+    [Fact]
+    public void GetToppingTest()
+    {
+        // Arrange
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 0, Fam40x40Price = 0, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
+            Topping = "String"
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+        
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+        
+        // Act
+        var result = service.GetAllPizzas();
+        
+        // Assert
+        Assert.True(Pizza1.Topping != String.Empty);
+    }
+
+    [Fact]
+    public void GetToppingNotNull()
+    {
+        // Arrange
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 0, Fam40x40Price = 0, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
+            Topping = ""
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+        
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+        
+        // Act
+        var result = service.GetAllPizzas();
+        
+        // Assert
+        Assert.True(Pizza1.Topping != String.Empty);
+    }
+
+    [Fact]
+    public void GetPizzaFam40x40PriceNotNull()
+    {
+        // Arrange
+
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 30, AlmGlutenfriPrice = 40,
+            Topping = "String"
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+
+
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+        
+        
+        // Act
+        var result = service.GetAllPizzas();
+        
+        // Assert
+        Assert.True(Pizza1.Fam40x40Price != null);
+    }
+
+    [Fact]
+    public void GetPizzaFam40x40PriceNull()
+    {
+        // Arrange
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 10, Fam40x40Price = 0, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
+            Topping = "String"
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+
+        // Act
+        var result = service.GetAllPizzas();
+
+        // Assert
+        Assert.False(Pizza1.Fam40x40Price.Equals(0));
+    }
+
+    [Fact]
+    public void GetPizzaFam50x50PriceNotNull()
+    {
+        // Arrange
+
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 30, AlmGlutenfriPrice = 40,
+            Topping = "String"
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+
+
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+        
+        
+        // Act
+        var result = service.GetAllPizzas();
+        
+        // Assert
+        Assert.True(Pizza1.Fam50x50Price != null);
+    }
+
+    [Fact]
+    public void GetPizzaFam50x50PriceNull()
+    {
+        // Arrange
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
+            Topping = "String"
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+
+        // Act
+        var result = service.GetAllPizzas();
+
+        // Assert
+        Assert.False(Pizza1.Fam50x50Price.Equals(0));
+    }
+
+    [Fact]
+    public void GetPizzaAlmGlutenfriPriceNotNull()
+    {
+        // Arrange
+
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 30, AlmGlutenfriPrice = 40,
+            Topping = "String"
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+
+
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+        
+        
+        // Act
+        var result = service.GetAllPizzas();
+        
+        // Assert
+        Assert.True(Pizza1.AlmGlutenfriPrice != null);
+    }
+
+    [Fact]
+    public void GetPizzaAlmGlutenfriPriceNull()
+    {
+        // Arrange
+        var Pizza1 = new Pizza()
+        {
+            Name = "String", AlmPrice = 10, Fam40x40Price = 0, Fam50x50Price = 0, AlmGlutenfriPrice = 0,
+            Topping = "String"
+        };
+
+        var Pizza = new List<Pizza>() { Pizza1 };
+
+        Mock<IPizzaRepository> mockRepository = new Mock<IPizzaRepository>();
+        mockRepository.Setup(r => r.GetAllPizzas()).Returns(Pizza);
+
+        IPizzaService service = new PizzaService(mockRepository.Object, _mapper, _postValidator, _pizzaValidator);
+
+        // Act
+        var result = service.GetAllPizzas();
+
+        // Assert
+        Assert.False(Pizza1.AlmGlutenfriPrice.Equals(0));
+    }
+
     
 }
