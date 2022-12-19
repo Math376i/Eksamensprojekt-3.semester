@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaOrderService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Application/PizzaOrderService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Domain/BuyPizza.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Domain/PizzaOrder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Infratructure/PizzaOrderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/DTOs/PizzaDTOs/PizzaDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DTOs/PizzaDTOs/PizzaDTOs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IOrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IOrderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IOrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IOrderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Interfaces/IPizzaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IPizzaService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/OrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/OrderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/PizzaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/PizzaService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Validators/PostPizzaValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Validators/PostPizzaValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Domain/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Domain/Pizza.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Pizza.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaTest/PizzaTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaTest/PizzaTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +30,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Bruger/Documents/GitHub/CompulsorySDP/BoxFrontend",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Bruger\\Documents\\GitHub\\Eksamensprojekt-3.semester\\PizzaFrontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bruger/Documents/GitHub/CompulsorySDP/BoxFrontend&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Bruger\\Documents\\GitHub\\Eksamensprojekt-3.semester\\PizzaFrontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (PizzaFrontend)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
@@ -113,6 +89,7 @@
       <workItem from="1671087621587" duration="20808000" />
       <workItem from="1671165068807" duration="426000" />
       <workItem from="1671174365754" duration="10177000" />
+      <workItem from="1671365583240" duration="862000" />
     </task>
     <servers />
   </component>

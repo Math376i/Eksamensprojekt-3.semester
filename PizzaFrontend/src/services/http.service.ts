@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import axios from "axios";
 import {pizza} from "../app/pizza";
 
-export const customAxios = axios.create({baseURL: 'http://localhost:5000/'})
+export const customAxios = axios.create({baseURL: 'https://localhost:5000/'})
 
 @Injectable({
   providedIn: 'root'

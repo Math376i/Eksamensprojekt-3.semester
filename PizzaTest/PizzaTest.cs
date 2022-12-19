@@ -98,15 +98,14 @@ public class PizzaTest
         //Arrange
         Mock<IPizzaOrderRepository> mockRepository = new Mock<IPizzaOrderRepository>();
         IPizzaOrderService service = new PizzaOrderService(_mapper, mockRepository.Object);
-        var Pizza1 = new Pizza() { Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 30, AlmGlutenfriPrice = 40, Topping = "String" };
+        var Pizza1 = new Pizza() { Id = 1, Name = "String", AlmPrice = 10, Fam40x40Price = 20, Fam50x50Price = 30, AlmGlutenfriPrice = 40, Topping = "String" };
         List<Pizza> fakeRepo = new List<Pizza>() { Pizza1 };
         
         //Act
 
-        service.DeletePizzaOrder(1);
+        PizzaOrder result  = service.DeletePizzaOrder(1);
 
         //Assert
-        
         mockRepository.Verify(r => r.DeletePizzaOrder(1), Times.Once);
     }
 
