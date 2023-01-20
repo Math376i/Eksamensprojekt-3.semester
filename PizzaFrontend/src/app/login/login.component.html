@@ -1,0 +1,38 @@
+<div style="margin: 30px">
+
+
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input [(ngModel)]="email" matInput>
+  </mat-form-field>
+  <input [(ngModel)]="password" matInput type="password">
+  <br>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Password</mat-label>
+    <input [(ngModel)]="password" matInput type="password">
+
+  </mat-form-field>
+  <br>
+  <button mat-flat-button color="primary" (click)="http.login({email: email, password: password})">Log in</button>
+  <button mat-flat-button color="accent" (click)="http.register({role: 'Admin', email: email, password: password})">Register</button>
+
+  <form [formGroup]="formGroup">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input [formControl]="emailControl" matInput placeholder="put your email here">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input [formControl]="whatever" matInput placeholder="put text here">
+    </mat-form-field>
+    <br>
+    <mat-checkbox [formControl]="checkBox">spam me</mat-checkbox>&nbsp;
+    <button [style]="email==''&&2+2==4 ? 'background-color: #ffffff' : 'background-color: #00ff00'" [disabled]="!formGroup.valid" mat-raised-button>Submit</button>
+    <input placeholder="email">
+    <input placeholder="{{password}}">
+
+    <input [placeholder]="email">
+    <input placeholder="salkjdsflkjds">
+    <input [placeholder]="email">
+  </form>
+</div>

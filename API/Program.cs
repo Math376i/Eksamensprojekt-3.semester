@@ -1,10 +1,16 @@
 
+using System.Text;
+using Application;
 using Application.DTOs;
+using Application.Helpers;
+using Application.Interfaces;
 using AutoMapper;
 using Domain;
 using FluentValidation;
 using Infrastructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +37,24 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("Appsettings"));
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateAudience = false,
+        ValidateIssuer = false,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("AppSettings:Secret")))
+    };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("PizzamandPolicy", (policy) => { policy.RequireRole("pizzamand");});
+
+});
+
 Application.DependencyResolver.DependencyResolverService.RegisterApplicationLayer(builder.Services);
 Infrastructure.DependencyResolver.DependencyResolverService.RegisterInfrastructureLayer(builder.Services);
 
@@ -51,14 +75,16 @@ if (app.Environment.IsDevelopment())
     
     app.UseCors(options =>
     {
-        options.AllowAnyOrigin();
+        options.SetIsOriginAllowed(origin => true);
         options.AllowAnyHeader();
         options.AllowAnyMethod();
+        options.AllowCredentials();
     });
 }
 
 app.UseHttpsRedirection();
 
+app.UseAuthorization();
 app.UseAuthorization();
 
 app.MapControllers();

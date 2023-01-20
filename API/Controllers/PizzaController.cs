@@ -3,10 +3,11 @@ using Application.DTOs;
 using Application.Interfaces;
 using Domain;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class PizzaController : ControllerBase
@@ -21,6 +22,7 @@ public class PizzaController : ControllerBase
         
     }
     // This method helps rebuilding the database
+    [AllowAnonymous]
     [HttpGet]
     [Route("RebuildDb")]
     public string RebuildDb()
@@ -36,7 +38,9 @@ public class PizzaController : ControllerBase
     {
         return _pizzaService.GetAllPizzas();
     }
+    
 // This method helps to create a pizza and chick if the pizza is okay for the program
+    [Authorize("pizzamandPolicy")]
     [HttpPost]
     [Route("CreatePizza")]
     public ActionResult CreateNewPizza(PizzaDTOs dto)

@@ -22,20 +22,23 @@ public class PizzaDbContext : DbContext
         modelBuilder.Entity<Order>()
             .Property(o => o.OrderId)
             .ValueGeneratedOnAdd();
-
-        
         
         modelBuilder.Entity<Order>()
             .HasOne(p =>p.pizza)
             .WithMany(p => p.PizzasOnOrders);
-        
-        
-        
+
+        modelBuilder.Entity<User>()
+            .Property(u => u.UserId)
+            .ValueGeneratedOnAdd();
+        modelBuilder.Entity<User>()
+            .HasIndex(u => u.Email)
+            .IsUnique();
     }
 
     
 
     public DbSet<Pizza> PizzaTable { get; set; }
-
     public DbSet<Order> OrderTable { get; set; }
+    public DbSet<User> UserTable { get; set; }
+    
 }
