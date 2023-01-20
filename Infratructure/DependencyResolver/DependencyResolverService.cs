@@ -9,7 +9,7 @@ public class DependencyResolverService
     {
         services.AddScoped<IPizzaRepository, PizzaRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();
-        
+        services.AddScoped<IUserRepository, UserRepository>();
 
     }
 }

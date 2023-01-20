@@ -13,8 +13,8 @@ namespace Application;
 
 public class AuthenticationService: IAuthenticationService
 {
-    private readonly AppSettings _appSettings;
-    private readonly IUserRepository _repository;
+    private  AppSettings _appSettings;
+    private  IUserRepository _repository;
     public AuthenticationService(IUserRepository repository,IOptions<AppSettings> appSettings)
     {
         _repository = repository;

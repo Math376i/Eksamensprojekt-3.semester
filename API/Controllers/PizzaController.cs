@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[Authorize]
+
 [ApiController]
 [Route("[controller]")]
 public class PizzaController : ControllerBase
@@ -40,7 +40,7 @@ public class PizzaController : ControllerBase
     }
     
 // This method helps to create a pizza and chick if the pizza is okay for the program
-    [Authorize("pizzamandPolicy")]
+    [AllowAnonymous]
     [HttpPost]
     [Route("CreatePizza")]
     public ActionResult CreateNewPizza(PizzaDTOs dto)

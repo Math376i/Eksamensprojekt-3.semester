@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import axios from "axios";
 import {pizza} from "../app/pizza";
 
-export const customAxios = axios.create({baseURL: 'https://localhost:5000/'})
+export const customAxios = axios.create({
+  baseURL: 'https://localhost:5000/',
+
+})
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +41,7 @@ export class HttpService {
   }
 
   async CreateNewOrder(){
-    const httpResult = await customAxios.post('Pizza/CreateNewOrder')
+    const httpResult = await customAxios.post('Pizza/CreateOrder')
   }
 
   async deletePizzaFromOrder(id: any) {
@@ -47,9 +50,18 @@ export class HttpService {
   }
 
   async sendOrder(dto: any){
-    const httpResult = await customAxios.post('Pizza/CreateNewPizzaOrder',dto)
+    const httpResult = await customAxios.post('Pizza/CreateOrder',dto)
     return httpResult.data;
   }
 
 
+ async login(dto: { password: any; email: any }) {
+    const httpResult = await customAxios.post('auth/login',dto)
+    return httpResult.data;
+  }
+
+  async register(dto: { password: any; role: string; email: any }) {
+    const httpResult = await customAxios.post('auth/register',dto)
+    return httpResult.data;
+  }
 }

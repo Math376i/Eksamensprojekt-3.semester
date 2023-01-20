@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../API/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Application/AuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Application/DTOs/User/LoginAndRegisterDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Application/Helpers/AppSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Application/Interfaces/IAuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Application/Interfaces/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Domain/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Infratructure/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/login/login.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../API/API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Controllers/PizzaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/AuthenticationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/DependencyResolver/DependencyResolverService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infratructure/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/1.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/2.pack" afterDir="false" />
@@ -29,6 +18,17 @@
       <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/http.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +121,8 @@
       <workItem from="1671365583240" duration="862000" />
       <workItem from="1674221578225" duration="1146000" />
       <workItem from="1674223686778" duration="96000" />
+      <workItem from="1674226274187" duration="3708000" />
+      <workItem from="1674230361867" duration="5735000" />
     </task>
     <servers />
   </component>

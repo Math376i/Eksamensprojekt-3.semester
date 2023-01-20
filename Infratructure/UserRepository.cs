@@ -5,7 +5,7 @@ namespace Infrastructure;
 
 public class UserRepository: IUserRepository
 {
-    private readonly PizzaDbContext _context;
+    private PizzaDbContext _context;
     
     public UserRepository(PizzaDbContext context)
     {
