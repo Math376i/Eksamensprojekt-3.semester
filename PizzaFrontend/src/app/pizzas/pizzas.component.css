@@ -46,11 +46,8 @@ body.WebBody{
 
 .order font.CustomerInfo{margin-left: 40px; font-weight: bold; color: #474747;}
 
-.order label.Name{margin-left: 20px; color: #474747;}
-
-.order label.Phone{margin-left: 20px; color: #474747;}
-
 .order label.Email{margin-left: 20px; color: #474747;}
+.order label.Password{margin-left: 20px; color: #474747;}
 
 .order font.OrderInfo{margin-left: 40px; font-weight: bold; color: #474747;}
 

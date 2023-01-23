@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/../API/db.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/PizzaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/PizzaService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Domain/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Domain/Pizza.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Pizza.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +109,10 @@
       <workItem from="1674230361867" duration="5907000" />
       <workItem from="1674276748886" duration="2059000" />
       <workItem from="1674331703889" duration="281000" />
+      <workItem from="1674449038118" duration="2626000" />
+      <workItem from="1674466906476" duration="694000" />
+      <workItem from="1674467620860" duration="3348000" />
+      <workItem from="1674471041065" duration="2123000" />
     </task>
     <servers />
   </component>

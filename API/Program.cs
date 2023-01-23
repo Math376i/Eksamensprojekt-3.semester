@@ -1,9 +1,7 @@
 
 using System.Text;
-using Application;
 using Application.DTOs;
 using Application.Helpers;
-using Application.Interfaces;
 using AutoMapper;
 using Domain;
 using FluentValidation;

@@ -9,15 +9,15 @@
     <font class="CustomerInfo" size="5">Kunde information </font>
     <br>
     <br>
-    <form> <label class="Name"> <font size=4> Navn </font> </label>
-      <Input class="TextBoxName" [(ngModel)]="CustomerName" ngDefaultControl name="Name" type="text" id="Name" placeholder="Fornavn... Efternavn...">
-      <br><br>
-      <label class="Phone"> <font size=4> Telefon nr: </font> </label>
-      <Input class="TextBoxPhone" [(ngModel)]="PhoneNumber" ngDefaultControl name="Phone" type="text" id="Phone" placeholder="Telefon nr...">
-      <br><br>
+    <form> <label class=""> <font size=4>  </font> </label>
+
+
       <label class="Email"> <font size=4> Email: </font> </label>
       <Input class="TextBoxEmail" [(ngModel)]="Email" ngDefaultControl name="Email" type="text" id="Email" placeholder="Email..."> </form>
-
+    <br>
+    <label class="Password"> <font size=4> Password: </font> </label>
+    <Input class="textBoxPassword" [(ngModel)]="Password" ngDefaultControl name="Password" type="text" id="Password" placeholder="password">
+    <br><br>
 
   </label>
   <button class = "BtnOrder" (click)="buy()"><font class="BtnText"> Til Kassen </font> </button>

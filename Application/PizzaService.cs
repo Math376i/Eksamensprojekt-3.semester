@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using Microsoft.AspNetCore.Mvc;
 using Application.DTOs;
 using Application.Interfaces;
 using Application.Validators;

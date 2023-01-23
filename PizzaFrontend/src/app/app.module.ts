@@ -11,6 +11,7 @@ import { PizzahandlerComponent } from './pizzahandler/pizzahandler.component';
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {AuthguardService} from "./authguard.service";
 
+
 const routes: Routes = [
   {
     path: 'menu',component: PizzahandlerComponent, canActivate : [AuthguardService]
@@ -25,6 +26,7 @@ const routes: Routes = [
     PizzasComponent,
     LoginComponent,
     PizzahandlerComponent,
+
 
   ],
   imports: [

@@ -14,9 +14,9 @@ export class PizzasComponent implements OnInit {
   CustomerInfo: any;
   pizzasOrdered: any []= [];
 
-  CustomerName: any;
-  PhoneNumber: any;
+
   Email: any;
+  Password: any;
 
   PizzaName: string ="";
   AlmPrice : number = 0;
@@ -57,9 +57,9 @@ export class PizzasComponent implements OnInit {
   async buy () {
 
     let dto = {
-      CustomerName: this.CustomerName,
-      PhoneNumber: this.PhoneNumber,
+
       Email: this.Email,
+      Password: this.Password,
       BuyPizzas: this.pizzasOrdered
     }
     await this.httpService.sendOrder(dto)
