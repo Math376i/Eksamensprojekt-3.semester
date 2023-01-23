@@ -26,6 +26,7 @@ public class PizzaDbContext : DbContext
         modelBuilder.Entity<Order>()
             .HasOne(p =>p.pizza)
             .WithMany(p => p.PizzasOnOrders);
+        
         modelBuilder.Entity<Order>()
             .HasIndex(o => o.Email)
             .IsUnique();
