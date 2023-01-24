@@ -22,6 +22,8 @@
   </label>
   <button class = "BtnOrder" (click)="buy()"><font class="BtnText"> Til Kassen </font> </button>
 
+  <button mat-raised-button class="BtnText  logout"  (click)="logout()" > Log out</button>
+
     <label class="PizzasOrdered" ><br>
       <font class="OrderInfo" size="5">Ordre information </font><br><br>
       <li class="ListOfOrderedPizzas" *ngFor="let pizza of pizzasOrdered">
@@ -52,5 +54,6 @@
     </label>
   </li>
 </ul>
+
 </body>
 

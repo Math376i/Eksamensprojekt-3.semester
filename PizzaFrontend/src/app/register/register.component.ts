@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from "../../services/http.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ export class RegisterComponent  implements OnInit {
   email: any;
   password: any;
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +24,7 @@ export class RegisterComponent  implements OnInit {
     }
     var token = await this.http.register(dto);
     localStorage.setItem('token',token)
+    this.router.navigate(['/menu'])
   }
 }
 

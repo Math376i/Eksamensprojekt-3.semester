@@ -111,6 +111,17 @@ body.WebBody{
 .pizzas button:hover {background-color: rgb(189, 0, 0);}
 
 
+.logout {
+  position: absolute;
+  background-color: #770000;
+  height: 30px;
+  width: 120px;
+  margin-top: 210px;
+  margin-right: 200px;
+  right: 2px;
+  color: white;
+}
+
 
 
 

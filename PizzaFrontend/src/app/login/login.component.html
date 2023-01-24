@@ -1,12 +1,16 @@
-
+<body class="WebBody">
+<div class="login">
 <mat-form-field class="example-full-width">
-  <mat-label>Email</mat-label>
-  <input [(ngModel)]="email" matInput type = "email">
+  <mat-label class="withetext">Email</mat-label>
+  <input [(ngModel)]="email" matInput type = "email" class="withetext">
 </mat-form-field>
 <br>
-<mat-form-field class="example-full-width">
-  <mat-label>Password</mat-label>
+<mat-form-field class="example-full-width ">
+  <mat-label class="withetext">Password</mat-label>
   <input [(ngModel)]="password" matInput type = "password" >
 </mat-form-field>
-
-<button mat-raised-button (click)="login()" > Log in</button>
+<br>
+<button mat-raised-button class="Btn withetext register"  (click)="login()" > Log in</button>
+<br><br>
+<button mat-raised-button class="Btn withetext register"  (click)="register()" > Register</button>
+</div>

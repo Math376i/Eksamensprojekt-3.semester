@@ -18,7 +18,7 @@ const routes: Routes = [
     path: 'menu',component: PizzahandlerComponent, canActivate : [AuthguardService]
   },
   {
-    path: 'login',component: LoginComponent
+    path: '',component: LoginComponent
   },
   {
     path: 'register', component: RegisterComponent

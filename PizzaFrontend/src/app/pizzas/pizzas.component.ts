@@ -65,4 +65,8 @@ export class PizzasComponent implements OnInit {
     await this.httpService.sendOrder(dto)
 
   }
+
+  logout() {
+
+  }
 }

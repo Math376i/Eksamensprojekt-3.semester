@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/fa4d0da7e34fae564eb00bc62bf6ed823283e566/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pizzas/pizzas.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +119,7 @@
       <workItem from="1674467620860" duration="3348000" />
       <workItem from="1674471041065" duration="2123000" />
       <workItem from="1674481454163" duration="129000" />
-      <workItem from="1674549479911" duration="1882000" />
+      <workItem from="1674549479911" duration="5843000" />
     </task>
     <servers />
   </component>

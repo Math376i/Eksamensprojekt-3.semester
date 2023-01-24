@@ -1,0 +1,23 @@
+body.WebBody{
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  position: absolute;
+  background-color: #CB5E4B;
+}
+.Btn {
+  position: absolute;
+  background-color: #770000;
+  height: 30px;
+  width: 120px;
+}
+.withetext{
+  margin-left: 0px; color: white;
+}
+
+.login{
+  margin-left: 45%;
+  margin-top: 15%;
+}
+
+.Btn:hover {background-color: rgb(189, 0, 0);}
