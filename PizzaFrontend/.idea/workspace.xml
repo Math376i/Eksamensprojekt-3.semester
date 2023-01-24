@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54969679-e321-460a-8598-7adb8a4030b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Infratructure/PizzaDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +104,7 @@
       <workItem from="1674467620860" duration="3348000" />
       <workItem from="1674471041065" duration="2123000" />
       <workItem from="1674481454163" duration="129000" />
+      <workItem from="1674549479911" duration="1882000" />
     </task>
     <servers />
   </component>

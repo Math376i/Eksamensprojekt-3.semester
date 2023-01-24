@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { PizzahandlerComponent } from './pizzahandler/pizzahandler.component';
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {AuthguardService} from "./authguard.service";
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: 'login',component: LoginComponent
+  },
+  {
+    path: 'register', component: RegisterComponent
   }
 ]
 @NgModule({
@@ -26,6 +30,7 @@ const routes: Routes = [
     PizzasComponent,
     LoginComponent,
     PizzahandlerComponent,
+    RegisterComponent,
 
 
   ],
